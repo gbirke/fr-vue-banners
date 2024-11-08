@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
+import { Locales } from '@src/domain/Locales';
 import { TrackingParameters } from '@src/domain/TrackingParameters';
 import { ImpressionCount } from '@src/utils/ImpressionCount';
-import { Locales } from '@src/domain/Locales';
 
 const MEMBERSHIP_FORM_URL = 'https://spenden.wikimedia.de/apply-for-membership';
 

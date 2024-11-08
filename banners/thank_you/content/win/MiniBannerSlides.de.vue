@@ -13,8 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
 import HeartIcon from '@banners/thank_you/components/icons/HeartIcon.vue';
+import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
 
 interface Props {
 	currentSlide: number;

@@ -1,12 +1,12 @@
-import { describe, it, vitest, expect } from 'vitest';
+import { describe, expect, it, vitest } from 'vitest';
 import { ClosedState } from '@src/components/BannerConductor/StateMachine/states/ClosedState';
+import { CloseChoices } from '@src/domain/CloseChoices';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { PageStub } from '@test/fixtures/PageStub';
-import { TrackerStub } from '@test/fixtures/TrackerStub';
 import { ResizeHandlerStub } from '@test/fixtures/ResizeHandlerStub';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { TimerStub } from '@test/fixtures/TimerStub';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TimerStub } from '@test/fixtures/TimerStub';
+import { TrackerStub } from '@test/fixtures/TrackerStub';
 
 describe( 'ClosedState', function () {
 	it( 'tracks close event on enter', function () {

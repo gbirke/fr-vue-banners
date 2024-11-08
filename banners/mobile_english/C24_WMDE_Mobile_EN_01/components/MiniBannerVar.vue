@@ -37,11 +37,11 @@
 
 <script setup lang="ts">
 
+import CloseIconCircle from '@src/components/Icons/CloseIconCircle.vue';
+import SmsIcon from '@src/components/Icons/SmsIcon.vue';
+import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
 import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
 import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
-import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
-import SmsIcon from '@src/components/Icons/SmsIcon.vue';
-import CloseIconCircle from '@src/components/Icons/CloseIconCircle.vue';
 import SimpleInfoIcon from './SimpleInfoIcon.vue';
 
 defineEmits( [ 'showFullPageBanner', 'showFullPageBannerPreselectedAmount', 'close', 'showUseOfFunds' ] );

@@ -18,21 +18,21 @@
 
 <script setup lang="ts">
 
-import { Page } from '@src/page/Page';
 import { inject, nextTick, onMounted, ref, shallowRef } from 'vue';
-import { BannerConfig } from '@src/domain/BannerConfig';
-import { ResizeHandler } from '@src/utils/ResizeHandler';
-import { newStateFactory } from '@src/components/BannerConductor/StateMachine/states/StateFactory';
 import { newBannerStateMachine } from '@src/components/BannerConductor/StateMachine/BannerStateMachine';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
-import { Vector2 } from '@src/utils/Vector2';
-import { ImpressionCount } from '@src/utils/ImpressionCount';
+import { newStateFactory } from '@src/components/BannerConductor/StateMachine/states/StateFactory';
+import { BannerConfig } from '@src/domain/BannerConfig';
+import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { Page } from '@src/page/Page';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { Tracker } from '@src/tracking/Tracker';
 import { TrackingEvent, TrackingFeatureName } from '@src/tracking/TrackingEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { ImpressionCount } from '@src/utils/ImpressionCount';
+import { ResizeHandler } from '@src/utils/ResizeHandler';
 import { Timer } from '@src/utils/Timer';
+import { Vector2 } from '@src/utils/Vector2';
 
 interface Props {
 	page: Page,

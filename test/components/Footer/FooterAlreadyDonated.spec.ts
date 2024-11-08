@@ -1,8 +1,8 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
-import { TrackerSpy } from '@test/fixtures/TrackerSpy';
 import { ClickAlreadyDonatedEvent } from '@src/tracking/events/ClickAlreadyDonatedEvent';
+import { TrackerSpy } from '@test/fixtures/TrackerSpy';
 
 describe( 'FooterAlreadyDonated.vue', () => {
 	let tracker: TrackerSpy;

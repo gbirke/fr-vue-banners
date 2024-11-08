@@ -22,9 +22,9 @@
 
 <script setup lang="ts">
 
-import { Company } from '@src/domain/UseOfFunds/Company';
 import { computed } from 'vue';
 import CompanyCitation from '@src/components/UseOfFunds/CompanyCitation.vue';
+import { Company } from '@src/domain/UseOfFunds/Company';
 
 interface Props {
 	companies: Company[];

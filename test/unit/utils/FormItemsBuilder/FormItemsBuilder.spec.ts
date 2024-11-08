@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import FormItemsBuilder from '@src/utils/FormItemsBuilder/FormItemsBuilder';
 import { Translator } from '@src/Translator';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import FormItemsBuilder from '@src/utils/FormItemsBuilder/FormItemsBuilder';
 
 const formatter = ( amount: number ): string => 'formatted-' + amount.toString();
 const messages = {

@@ -1,5 +1,5 @@
-import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 
 export class InitialState extends BannerState {
 	public readonly stateName: BannerStates = BannerStates.Initial;

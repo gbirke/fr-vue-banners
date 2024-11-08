@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, test } from 'vitest';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
-import { useFormModel } from '@src/components/composables/useFormModel';
 import { nextTick } from 'vue';
-import { resetFormModel } from '@test/resetFormModel';
 import { useAnonymousAddressTypeSetter } from '@src/components/composables/useAnonymousAddressTypeSetter';
+import { useFormModel } from '@src/components/composables/useFormModel';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 describe( 'useAnonymousAddressTypeSetter', () => {

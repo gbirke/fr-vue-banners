@@ -1,23 +1,23 @@
 import { createVueApp } from '@src/createVueApp';
 
 import './styles/styles.scss';
-import { Translator } from '@src/Translator';
-import { UrlRuntimeEnvironment } from '@src/utils/RuntimeEnvironment';
-import { LocalImpressionCount } from '@src/utils/LocalImpressionCount';
 import BannerConductor from '@src/components/BannerConductor/BannerConductor.vue';
-import { WindowResizeHandler } from '@src/utils/ResizeHandler';
-import Banner from './components/BannerVar.de.vue';
-import messages from './messages.de';
-import TranslationPlugin from '@src/TranslationPlugin';
-import { TrackingMembershipFormActions } from './MembershipFormActions';
-import { createTrackedURL, SUBSCRIBE_URL, USE_OF_FUNDS_URL } from './createTrackedURL';
+import { Locales } from '@src/domain/Locales';
 import PageWPDE from '@src/page/PageWPDE';
 import { TrackerWPDE } from '@src/tracking/TrackerWPDE';
-import eventMap from './event_map.wpde';
-import { createThankYouSettings } from './settings';
+import TranslationPlugin from '@src/TranslationPlugin';
+import { Translator } from '@src/Translator';
 import { IntegerDe } from '@src/utils/DynamicContent/formatters/IntegerDe';
-import { Locales } from '@src/domain/Locales';
+import { LocalImpressionCount } from '@src/utils/LocalImpressionCount';
+import { WindowResizeHandler } from '@src/utils/ResizeHandler';
+import { UrlRuntimeEnvironment } from '@src/utils/RuntimeEnvironment';
 import { WindowTimer } from '@src/utils/Timer';
+import Banner from './components/BannerVar.de.vue';
+import { createTrackedURL, SUBSCRIBE_URL, USE_OF_FUNDS_URL } from './createTrackedURL';
+import eventMap from './event_map.wpde';
+import { TrackingMembershipFormActions } from './MembershipFormActions';
+import messages from './messages.de';
+import { createThankYouSettings } from './settings';
 
 // Tracking placeholders will be replaced by webpack string-replace-loader
 // using the campaign configuration ( campaign_info.toml ) for the correct values

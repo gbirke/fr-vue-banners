@@ -22,8 +22,8 @@
 
 <script setup lang="ts">
 import { inject, watch } from 'vue';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 interface Props {
 	playLiveText: boolean

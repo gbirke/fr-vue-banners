@@ -1,8 +1,8 @@
-import { Page } from '@src/page/Page';
-import { BannerNotShownReasons } from './BannerNotShownReasons';
+import { getCampaignParameterOverride } from '@environment/CampaignParameterOverride';
 import { CampaignParameters } from '@src/domain/CampaignParameters';
 import { TrackingParameters } from '@src/domain/TrackingParameters';
-import { getCampaignParameterOverride } from '@environment/CampaignParameterOverride';
+import { Page } from '@src/page/Page';
+import { BannerNotShownReasons } from './BannerNotShownReasons';
 
 export const bannerHeightCssVariable = '--wmde-banner-height';
 export const showBannerClass = 'wmde-show-banner';

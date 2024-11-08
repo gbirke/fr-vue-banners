@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, Ref, ref } from 'vue';
+import { onMounted, onUnmounted, ref, Ref } from 'vue';
 
 export function useDisplaySwitch( minWidthForLargeScreen: number ): Ref<boolean> {
 

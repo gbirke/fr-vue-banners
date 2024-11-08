@@ -1,5 +1,5 @@
-import { expect, vi } from 'vitest';
 import { VueWrapper } from '@vue/test-utils';
+import { expect, vi } from 'vitest';
 import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 
 export const submitAddressTypeForm = async ( wrapper: VueWrapper<any>, addressType: FormItem ): Promise<void> => {

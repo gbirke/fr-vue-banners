@@ -1,8 +1,8 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect, vi } from 'vitest';
-import { TimerSpy } from '@test/fixtures/TimerSpy';
 import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { Timer } from '@src/utils/Timer';
+import { TimerSpy } from '@test/fixtures/TimerSpy';
 
 const expectSetsCookieImageOnSoftCloseClose = async ( getWrapper: () => VueWrapper<any> ): Promise<any> => {
 	const wrapper = getWrapper();

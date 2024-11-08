@@ -1,8 +1,8 @@
-import Minerva from '@src/page/skin/Minerva';
-import Vector2022 from '@src/page/skin/Vector2022';
-import Vector from '@src/page/skin/Vector';
-import { Skin } from '@src/page/skin/Skin';
 import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
+import Minerva from '@src/page/skin/Minerva';
+import { Skin } from '@src/page/skin/Skin';
+import Vector from '@src/page/skin/Vector';
+import Vector2022 from '@src/page/skin/Vector2022';
 
 export class SkinFactory {
 	private _mediaWiki: MediaWiki;

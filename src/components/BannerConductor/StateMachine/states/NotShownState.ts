@@ -1,9 +1,9 @@
-import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
 import { Page } from '@src/page/Page';
-import { Tracker } from '@src/tracking/Tracker';
 import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
+import { Tracker } from '@src/tracking/Tracker';
 import { ResizeHandler } from '@src/utils/ResizeHandler';
 import { Timer } from '@src/utils/Timer';
 

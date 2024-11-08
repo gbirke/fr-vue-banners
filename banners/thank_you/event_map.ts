@@ -1,13 +1,13 @@
-import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
-import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
-import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
-import { ThankYouModalShownEvent } from '@src/tracking/events/ThankYouModalShownEvent';
-import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
 import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
+import { ThankYouModalShownEvent } from '@src/tracking/events/ThankYouModalShownEvent';
+import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
+import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
 import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
+import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
+import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
+import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 
 export default new Map<string, TrackingEventConverterFactory>( [
 	[ NotShownEvent.EVENT_NAME, mapNotShownEvent ],

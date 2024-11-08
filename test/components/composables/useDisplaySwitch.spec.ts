@@ -1,7 +1,7 @@
-import { describe, expect, it, vi } from 'vitest';
-import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
-import { defineComponent } from 'vue';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it, vi } from 'vitest';
+import { defineComponent } from 'vue';
+import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
 
 describe( 'useDisplaySwitch', () => {
 	const TestComponent = defineComponent( {

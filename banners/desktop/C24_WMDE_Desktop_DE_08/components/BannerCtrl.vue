@@ -67,34 +67,34 @@
 </template>
 
 <script setup lang="ts">
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { inject, ref, watch } from 'vue';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import MainBanner from './MainBanner.vue';
-import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import BannerText from '../content/BannerText.vue';
-import BannerSlides from '../content/BannerSlides.vue';
-import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
 import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import { useFormModel } from '@src/components/composables/useFormModel';
+import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
 import {
 	createSubmittableMainDonationForm
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationForm';
 import {
 	createSubmittableUpgradeToYearly
 } from '@src/components/DonationForm/StepControllers/SubmittableUpgradeToYearly';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
-import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
-import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
 import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
-import { LocalCloseTracker } from '@src/utils/LocalCloseTracker';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
+import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
 import { BannerSubmitOnReturnEvent } from '@src/tracking/events/BannerSubmitOnReturnEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { Tracker } from '@src/tracking/Tracker';
+import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import { LocalCloseTracker } from '@src/utils/LocalCloseTracker';
+import MainBanner from './MainBanner.vue';
+import BannerSlides from '../content/BannerSlides.vue';
+import BannerText from '../content/BannerText.vue';
 
 enum ContentStates {
 	Main = 'wmde-banner-wrapper--main',

@@ -1,5 +1,5 @@
-import { Vector2 } from '@src/utils/Vector2';
 import { SizeIssueChecker } from '@src/utils/SizeIssueChecker/SizeIssueChecker';
+import { Vector2 } from '@src/utils/Vector2';
 
 export class WindowSizeIssueChecker implements SizeIssueChecker {
 	private readonly _minimumAllowedWidth: number;

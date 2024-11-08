@@ -1,6 +1,6 @@
 import { CloseChoices } from '@src/domain/CloseChoices';
-import hasLocalStorage from '@src/utils/hasLocalStorage';
 import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import hasLocalStorage from '@src/utils/hasLocalStorage';
 
 export interface LocalCloseTracker {
 	setItem( feature: TrackingFeatureName, closeChoice: CloseChoices ): void;

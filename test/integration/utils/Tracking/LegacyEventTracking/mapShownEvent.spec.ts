@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { mapShownEvent } from '@src/tracking/LegacyEventTracking/mapShownEvent';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { mapShownEvent } from '@src/tracking/LegacyEventTracking/mapShownEvent';
 import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
 import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 

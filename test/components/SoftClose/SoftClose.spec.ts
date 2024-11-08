@@ -1,10 +1,10 @@
-import { describe, expect, it, afterEach, beforeEach, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
-import SoftClose from '@src/components/SoftClose/SoftClose.vue';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
-import { TimerStub } from '@test/fixtures/TimerStub';
+import SoftClose from '@src/components/SoftClose/SoftClose.vue';
 import { Timer } from '@src/utils/Timer';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TimerStub } from '@test/fixtures/TimerStub';
 
 describe( 'SoftClose', function () {
 

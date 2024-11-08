@@ -1,7 +1,7 @@
-import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
-import TimeRange from '@src/utils/TimeRange';
 import { Translator } from '@src/Translator';
 import { Ordinal } from '@src/utils/DynamicContent/formatters/Ordinal';
+import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
+import TimeRange from '@src/utils/TimeRange';
 
 export class CampaignDaySentence implements TextGenerator {
 	private _ordinal: Ordinal;

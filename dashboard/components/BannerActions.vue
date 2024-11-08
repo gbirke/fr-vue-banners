@@ -63,17 +63,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, Ref, ref } from 'vue';
-import type { Banner, Campaign } from '../../webpack/campaign_config_types';
-import IconPreview from './IconPreview.vue';
-import IconEdit from './IconEdit.vue';
-import IconCopy from './IconCopy.vue';
-import IconBuild from './IconBuild.vue';
-import { relevantTime } from '../relevant_time';
-import { CompileInfo } from '../util';
+import { computed, ref, Ref } from 'vue';
 import LoadingSpinner from './BuildingAnimation.vue';
 import CopyingAnimation from './CopyingAnimation.vue';
+import IconBuild from './IconBuild.vue';
+import IconCopy from './IconCopy.vue';
 import IconDarkMode from './IconDarkMode.vue';
+import IconEdit from './IconEdit.vue';
+import IconPreview from './IconPreview.vue';
+import type { Banner, Campaign } from '../../webpack/campaign_config_types';
+import { relevantTime } from '../relevant_time';
+import { CompileInfo } from '../util';
 
 interface Props {
 	banner: Banner;

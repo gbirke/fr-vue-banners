@@ -30,11 +30,11 @@
 </template>
 
 <script setup lang="ts">
+import { inject } from 'vue';
 import SelectionInput from '@src/components/Footer/SelectionInput.vue';
 import TickIcon from '@src/components/Icons/TickIcon.vue';
-import { inject } from 'vue';
-import { Tracker } from '@src/tracking/Tracker';
 import { ClickAlreadyDonatedEvent } from '@src/tracking/events/ClickAlreadyDonatedEvent';
+import { Tracker } from '@src/tracking/Tracker';
 
 const tracker = inject<Tracker>( 'tracker' );
 

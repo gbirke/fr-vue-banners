@@ -97,41 +97,41 @@
 </template>
 
 <script setup lang="ts">
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { inject, ref, watch } from 'vue';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import SoftClose from '@src/components/SoftClose/SoftClose.vue';
-import MainBanner from './MainBanner.vue';
-import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import BannerText from '../content/BannerText.vue';
-import BannerSlides from '../content/BannerSlides.vue';
-import AlreadyDonatedContent from '../content/AlreadyDonatedContent.vue';
-import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
+import AlreadyDonatedModal from '@src/components/AlreadyDonatedModal/AlreadyDonatedModal.vue';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
+import { useAnonymousAddressTypeSetter } from '@src/components/composables/useAnonymousAddressTypeSetter';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
 import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import { useFormModel } from '@src/components/composables/useFormModel';
+import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
 import {
 	createSubmittableMainDonationForm
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationForm';
 import {
 	createSubmittableUpgradeToYearly
 } from '@src/components/DonationForm/StepControllers/SubmittableUpgradeToYearly';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
-import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
-import ProgressBar from '@src/components/ProgressBar/DoubleProgressBar.vue';
-import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
-import AlreadyDonatedModal from '@src/components/AlreadyDonatedModal/AlreadyDonatedModal.vue';
-import { Tracker } from '@src/tracking/Tracker';
-import ChevronDownIcon from '@src/components/Icons/ChevronDownIcon.vue';
 import BannerFooter from '@src/components/Footer/BannerFooter.vue';
-import MinimisedBanner from './MinimisedBanner.vue';
-import { BannerMinimisedEvent } from '../events/BannerMinimisedEvent';
-import { BannerMaximisedEvent } from '../events/BannerMaximisedEvent';
-import { useAnonymousAddressTypeSetter } from '@src/components/composables/useAnonymousAddressTypeSetter';
+import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
+import ChevronDownIcon from '@src/components/Icons/ChevronDownIcon.vue';
+import ProgressBar from '@src/components/ProgressBar/DoubleProgressBar.vue';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import SoftClose from '@src/components/SoftClose/SoftClose.vue';
+import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
 import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import MainBanner from './MainBanner.vue';
+import MinimisedBanner from './MinimisedBanner.vue';
+import AlreadyDonatedContent from '../content/AlreadyDonatedContent.vue';
+import BannerSlides from '../content/BannerSlides.vue';
+import BannerText from '../content/BannerText.vue';
+import { BannerMaximisedEvent } from '../events/BannerMaximisedEvent';
+import { BannerMinimisedEvent } from '../events/BannerMinimisedEvent';
 
 enum ContentStates {
 	Main = 'wmde-banner-wrapper--main',

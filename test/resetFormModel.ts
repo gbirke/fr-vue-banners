@@ -1,6 +1,6 @@
+import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
 import { FormModel } from '@src/utils/FormModel/FormModel';
 import { Validity } from '@src/utils/FormModel/Validity';
-import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
 
 export function resetFormModel( formModel: FormModel ): void {
 	formModel.interval.value = '';

@@ -9,10 +9,10 @@
 	</div>
 </template>
 <script setup lang="ts">
-import InfoIcon from '@src/components/Icons/InfoIcon.vue';
 import { inject, onMounted, onUnmounted } from 'vue';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
+import InfoIcon from '@src/components/Icons/InfoIcon.vue';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 const {
 	getCurrentDateAndTime

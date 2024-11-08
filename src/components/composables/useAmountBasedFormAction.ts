@@ -1,7 +1,7 @@
-import { FormActions } from '@src/domain/FormActions';
 import { computed, Ref } from 'vue';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { useFormModel } from '@src/components/composables/useFormModel';
+import { FormActions } from '@src/domain/FormActions';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 
 export function useFormAction( formActions: FormActions, minimumAmount: number, extraURLParameters: { smallAmount: string, largeAmount: string } ): { formAction: Ref<string> } {

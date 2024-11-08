@@ -21,9 +21,9 @@
 <script setup lang="ts">
 
 import FundsContent from '@src/components/UseOfFunds/FundsContent.vue';
-import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
 import IconClose from '@src/components/UseOfFunds/Icons/IconClose.vue';
+import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
+import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
 
 interface Props {
 	isFundsModalVisible: boolean,

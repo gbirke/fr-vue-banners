@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { mount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import LargeFooter from '@src/components/FallbackBanner/LargeFooter.vue';
 
 describe( 'LargeFooter.vue', () => {

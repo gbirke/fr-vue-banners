@@ -1,8 +1,8 @@
-import { FormModel } from '@src/utils/FormModel/FormModel';
 import { StepController } from '@src/components/DonationForm/StepController';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { FormModel } from '@src/utils/FormModel/FormModel';
 
 export function createSubmittableCustomAmount( formModel: FormModel, stepNamePrevious: string ): StepController {
 	return {

@@ -1,9 +1,9 @@
-import FormItemsBuilder from '@src/utils/FormItemsBuilder/FormItemsBuilder';
 import { Translator } from '@src/Translator';
+import { NumberFormatter } from '@src/utils/DynamicContent/formatters/NumberFormatter';
 import { DonationFormItems } from '@src/utils/FormItemsBuilder/DonationFormItems';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { NumberFormatter } from '@src/utils/DynamicContent/formatters/NumberFormatter';
+import FormItemsBuilder from '@src/utils/FormItemsBuilder/FormItemsBuilder';
 
 export function createFormItems( translations: Translator, amountFormatter: NumberFormatter ): DonationFormItems {
 	return new FormItemsBuilder( translations, amountFormatter )

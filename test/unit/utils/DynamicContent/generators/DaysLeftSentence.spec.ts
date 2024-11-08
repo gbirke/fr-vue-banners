@@ -1,7 +1,7 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import { Translator } from '@src/Translator';
 import { DaysLeftSentence } from '@src/utils/DynamicContent/generators/DaysLeftSentence';
 import TimeRange from '@src/utils/TimeRange';
-import { Translator } from '@src/Translator';
 
 describe( 'DaysLeftSentence', function () {
 	const translator = new Translator( {

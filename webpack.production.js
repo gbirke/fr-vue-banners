@@ -1,12 +1,11 @@
-const fs = require( 'fs' );
 const rimraf = require( 'rimraf' );
 const { mergeWithCustomize, customizeObject } = require( 'webpack-merge' );
-const CommonConfig = require( './webpack.common.js' );
-const MediaWikiTextWrapper = require( './webpack/mediawiki_text_wrapper' );
-const LoadVueOnWpde = require( './webpack/load_vue_on_wpde' );
-
-const CampaignConfig = require( './webpack/campaign_config' );
+const fs = require( 'fs' );
 const path = require( 'path' );
+const CampaignConfig = require( './webpack/campaign_config' );
+const LoadVueOnWpde = require( './webpack/load_vue_on_wpde' );
+const MediaWikiTextWrapper = require( './webpack/mediawiki_text_wrapper' );
+const CommonConfig = require( './webpack.common.js' );
 
 function readWrapperTemplate( name ) {
 	// eslint-disable-next-line security/detect-non-literal-fs-filename

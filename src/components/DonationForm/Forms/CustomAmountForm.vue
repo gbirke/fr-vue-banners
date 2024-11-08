@@ -60,17 +60,17 @@ export default {
 
 <script setup lang="ts">
 import { computed, inject, ref } from 'vue';
+import { useFormModel } from '@src/components/composables/useFormModel';
+import { isValidOrUnset } from '@src/components/DonationForm/Forms/isValidOrUnset';
+import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { amountValidityMessageKey } from '@src/utils/amountValidityMessageKey';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
+import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
 import { parseFloatFromFormattedString } from '@src/utils/parseFloatFromFormattedString';
 import { validateAmount } from '@src/validation/validateAmount';
-import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import { isValidOrUnset } from '@src/components/DonationForm/Forms/isValidOrUnset';
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
-import { amountValidityMessageKey } from '@src/utils/amountValidityMessageKey';
-import { Tracker } from '@src/tracking/Tracker';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
 
 interface Props {
 	isCurrent: boolean

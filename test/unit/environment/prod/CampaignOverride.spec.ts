@@ -1,6 +1,6 @@
-import { getCampaignParameterOverride } from '@src/environment/prod/CampaignParameterOverride';
 import { describe, expect, it } from 'vitest';
 import { CampaignParameters } from '@src/domain/CampaignParameters';
+import { getCampaignParameterOverride } from '@src/environment/prod/CampaignParameterOverride';
 
 describe( 'getCampaignParameterOverride (prod version)', () => {
 	it( 'Returns the input parameters', () => {

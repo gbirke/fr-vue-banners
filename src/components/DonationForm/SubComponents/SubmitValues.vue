@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 
-import { useFormModel } from '@src/components/composables/useFormModel';
 import { computed } from 'vue';
+import { useFormModel } from '@src/components/composables/useFormModel';
 
 const { addressType, totalNumericAmount, interval, paymentMethod } = useFormModel();
 

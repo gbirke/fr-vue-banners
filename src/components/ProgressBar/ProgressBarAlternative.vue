@@ -26,8 +26,8 @@
 </template>
 
 <script setup lang="ts">
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { inject } from 'vue';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 interface Props {
 	amountToShowOnRight: 'TARGET'|'MISSING'

@@ -121,45 +121,45 @@
 </template>
 
 <script setup lang="ts">
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import SoftClose from '@src/components/SoftClose/SoftClose.vue';
 import { computed, inject, ref, watch } from 'vue';
-import FullPageBanner from './FullPageBanner.vue';
-import MiniBanner from './MiniBannerVar.vue';
-import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
-import { PageScroller } from '@src/utils/PageScroller/PageScroller';
-import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
-import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
-import BannerText from '../content/BannerText.vue';
-import BannerSlides from '../content/BannerSlides.vue';
-import BannerFooter from '@src/components/Footer/BannerFooter.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import { Tracker } from '@src/tracking/Tracker';
-import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { useAnonymousAddressTypeSetter } from '@src/components/composables/useAnonymousAddressTypeSetter';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
-import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
+import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
 import MainDonationFormPaymentMethodLabeledButton
 	from '@src/components/DonationForm/Forms/MainDonationFormPaymentMethodLabeledButton.vue';
+import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
+import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
 import {
 	createSubmittableMainDonationForm
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationForm';
 import {
 	createSubmittableUpgradeToYearly
 } from '@src/components/DonationForm/StepControllers/SubmittableUpgradeToYearly';
-import { useAnonymousAddressTypeSetter } from '@src/components/composables/useAnonymousAddressTypeSetter';
+import BannerFooter from '@src/components/Footer/BannerFooter.vue';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import SmsIcon from '@src/components/Icons/SmsIcon.vue';
 import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
 import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
-import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
 import SepaLogo from '@src/components/PaymentLogos/SepaLogo.vue';
-import SmsIcon from '@src/components/Icons/SmsIcon.vue';
+import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
+import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import SoftClose from '@src/components/SoftClose/SoftClose.vue';
+import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
 import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
+import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import { PageScroller } from '@src/utils/PageScroller/PageScroller';
+import FullPageBanner from './FullPageBanner.vue';
+import MiniBanner from './MiniBannerVar.vue';
+import BannerSlides from '../content/BannerSlides.vue';
+import BannerText from '../content/BannerText.vue';
 
 enum ContentStates {
 	Mini = 'wmde-banner-wrapper--mini',

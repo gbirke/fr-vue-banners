@@ -1,11 +1,11 @@
-import { beforeEach, describe, vi, it, expect } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { resetFormModel } from '@test/resetFormModel';
 import {
 	createIntermediateUpgradeToYearly
 } from '@src/components/DonationForm/StepControllers/IntermediateUpgradeToYearly';
+import { StepAction } from '@src/components/DonationForm/StepNavigation';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

@@ -23,10 +23,10 @@
 
 <script setup lang="ts">
 import { inject, onMounted, onUnmounted } from 'vue';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
-import InfoIcon from '@src/components/Icons/InfoIcon.vue';
 import AnimatedText from '@src/components/AnimatedText/AnimatedText.vue';
 import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
+import InfoIcon from '@src/components/Icons/InfoIcon.vue';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 const {
 	currentDayName,

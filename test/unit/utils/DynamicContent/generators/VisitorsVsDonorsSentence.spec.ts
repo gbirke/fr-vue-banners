@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { VisitorsVsDonorsSentence } from '@src/utils/DynamicContent/generators/VisitorsVsDonorsSentence';
 import { TranslationMessages, Translator } from '@src/Translator';
 import { IntegerEn } from '@src/utils/DynamicContent/formatters/IntegerEn';
+import { VisitorsVsDonorsSentence } from '@src/utils/DynamicContent/generators/VisitorsVsDonorsSentence';
 
 describe( 'VisitorsVsDonorsSentence', function () {
 	it( 'returns the correct sentence when there is impressions', function () {

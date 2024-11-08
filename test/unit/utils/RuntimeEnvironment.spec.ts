@@ -1,6 +1,6 @@
-import { describe, it, test, expect } from 'vitest';
+import { describe, expect, it, test } from 'vitest';
 
-import { UrlRuntimeEnvironment, LocationSlice } from '@src/utils/RuntimeEnvironment';
+import { LocationSlice, UrlRuntimeEnvironment } from '@src/utils/RuntimeEnvironment';
 describe( 'UrlRuntimeEnvironment', function () {
 
 	const newLocation = ( queryParams: string ): LocationSlice => ( {

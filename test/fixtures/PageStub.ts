@@ -1,7 +1,7 @@
-import { Page } from '@src/page/Page';
-import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
 import { CampaignParameters } from '@src/domain/CampaignParameters';
 import { TrackingParameters } from '@src/domain/TrackingParameters';
+import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { Page } from '@src/page/Page';
 
 export class PageStub implements Page {
 	public hideBannerCallback: () => void;

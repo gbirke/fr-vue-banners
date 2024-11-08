@@ -1,21 +1,21 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
-import BannerConductor from '@src/components/BannerConductor/FallbackBannerConductor.vue';
-import { PageStub } from '@test/fixtures/PageStub';
-import { ResizeHandlerStub } from '@test/fixtures/ResizeHandlerStub';
-import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { defineComponent, markRaw, nextTick } from 'vue';
+import BannerConductor from '@src/components/BannerConductor/FallbackBannerConductor.vue';
 import { newBannerStateMachine } from '@src/components/BannerConductor/StateMachine/BannerStateMachine';
-import { BannerStateMachineSpy } from '@test/fixtures/BannerStateMachineSpy';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { Page } from '@src/page/Page';
-import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
-import { TrackerStub } from '@test/fixtures/TrackerStub';
-import { ReactiveProperty } from '@src/domain/StateMachine/ReactiveProperty';
 import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
+import { ReactiveProperty } from '@src/domain/StateMachine/ReactiveProperty';
+import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { Page } from '@src/page/Page';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { ResizeHandler } from '@src/utils/ResizeHandler';
+import { BannerStateMachineSpy } from '@test/fixtures/BannerStateMachineSpy';
+import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
+import { PageStub } from '@test/fixtures/PageStub';
+import { ResizeHandlerStub } from '@test/fixtures/ResizeHandlerStub';
 import { TimerStub } from '@test/fixtures/TimerStub';
+import { TrackerStub } from '@test/fixtures/TrackerStub';
 
 vi.mock( '@src/components/BannerConductor/StateMachine/BannerStateMachine', async () => {
 	const actual = await vi.importActual( '@src/components/BannerConductor/StateMachine/BannerStateMachine' );

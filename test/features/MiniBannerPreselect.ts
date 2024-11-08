@@ -1,7 +1,7 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect } from 'vitest';
-import { Tracker } from '@src/tracking/Tracker';
 import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { Tracker } from '@src/tracking/Tracker';
 
 const expectShowsFullPageWhenPreselectIsClicked = async ( wrapper: VueWrapper<any> ): Promise<any> => {
 	await wrapper.find( '.wmde-banner-mini-button-preselect' ).trigger( 'click' );

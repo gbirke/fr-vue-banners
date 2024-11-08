@@ -1,7 +1,7 @@
-import { describe, expect, it } from 'vitest';
-import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import FundsContent from '@src/components/UseOfFunds/FundsContent.vue';
+import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
 
 describe( 'FundsContent.vue', () => {
 	const getContent = (): UseOfFundsContent => {

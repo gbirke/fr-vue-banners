@@ -3,8 +3,16 @@ module.exports = {
 		'wikimedia',
 		'plugin:vue/vue3-essential',
 		'eslint:recommended',
-		'@vue/eslint-config-typescript'
+		'@vue/eslint-config-typescript',
+		'plugin:import/recommended',
+		'plugin:import/typescript'
 	],
+	'settings': {
+		'import/resolver': {
+			typescript: true,
+			node: true
+		}
+	},
 	'parserOptions': {
 		ecmaVersion: 'latest',
 		parser: '@typescript-eslint/parser'
@@ -98,7 +106,25 @@ module.exports = {
 				format: [ 'camelCase' ],
 				leadingUnderscore: 'forbid'
 			}
-		]
+		],
+		'sort-imports': [ 'error', {
+			ignoreCase: true,
+			ignoreDeclarationSort: true
+		} ],
+		'import/order': [ 1, {
+			groups: [ 'external', 'builtin', 'internal', 'sibling', 'parent', 'index' ],
+			pathGroups: [
+				{ pattern: '@src/createVueApp', group: 'external' },
+				{ pattern: '@banners/*', group: 'internal' },
+				{ pattern: '@src/*', group: 'internal' },
+				{ pattern: '@test/*', group: 'internal' },
+				{ pattern: '@environment/**', group: 'internal' }
+			],
+			alphabetize: {
+				order: 'asc',
+				caseInsensitive: true
+			}
+		} ]
 	},
 	'overrides': [
 		{

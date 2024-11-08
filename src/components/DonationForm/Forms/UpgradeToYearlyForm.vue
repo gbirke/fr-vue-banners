@@ -91,13 +91,13 @@ export default {
 
 import { computed, inject, ref } from 'vue';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { Validity } from '@src/utils/FormModel/Validity';
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
-import { Tracker } from '@src/tracking/Tracker';
-import { UpgradeToYearlyEvent } from '@src/tracking/events/UpgradeToYearlyEvent';
 import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import { UpgradeToYearlyEvent } from '@src/tracking/events/UpgradeToYearlyEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { Validity } from '@src/utils/FormModel/Validity';
 
 interface Props {
 	isCurrent: boolean

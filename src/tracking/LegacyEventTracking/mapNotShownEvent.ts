@@ -1,7 +1,7 @@
 import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
 import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
 import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
-import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
 
 /**
  * @deprecated Will be removed when the new tracking schema is implemented

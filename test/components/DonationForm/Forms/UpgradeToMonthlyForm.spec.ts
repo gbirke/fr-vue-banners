@@ -1,13 +1,13 @@
-import { beforeEach, describe, expect, it } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
-import UpgradeToMonthlyForm from '@src/components/DonationForm/Forms/UpgradeToMonthlyForm.vue';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { nextTick } from 'vue';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { resetFormModel } from '@test/resetFormModel';
+import UpgradeToMonthlyForm from '@src/components/DonationForm/Forms/UpgradeToMonthlyForm.vue';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { UpgradeToMonthlyEvent } from '@src/tracking/events/UpgradeToMonthlyEvent';
 import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import { TrackerSpy } from '@test/fixtures/TrackerSpy';
-import { UpgradeToMonthlyEvent } from '@src/tracking/events/UpgradeToMonthlyEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
-import { nextTick } from 'vue';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

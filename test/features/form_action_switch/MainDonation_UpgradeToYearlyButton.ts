@@ -1,7 +1,7 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect, vi } from 'vitest';
-import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 
 const goToUpgradeStep = async ( wrapper: VueWrapper<any>, payment: FormItem ): Promise<any> => {
 	await wrapper.find( `.interval-0 .wmde-banner-select-group-input` ).setValue();

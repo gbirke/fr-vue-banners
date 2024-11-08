@@ -1,11 +1,11 @@
-import { describe, beforeEach, it, expect, vi, test, afterEach } from 'vitest';
-import { TrackerWPDE } from '@src/tracking/TrackerWPDE';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { TrackingEvent } from '@src/tracking/TrackingEvent';
+import { afterEach, beforeEach, describe, expect, it, test, vi } from 'vitest';
 import { ClickAlreadyDonatedEvent } from '@src/tracking/events/ClickAlreadyDonatedEvent';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { TrackerWPDE } from '@src/tracking/TrackerWPDE';
+import { TrackingEvent } from '@src/tracking/TrackingEvent';
 
 interface Window {
 	[ key: string ]: any;

@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import AlreadyDonatedModal from '@src/components/AlreadyDonatedModal/AlreadyDonatedModal.vue';
 import { AlreadyDonatedShownEvent } from '@src/tracking/events/AlreadyDonatedShownEvent';
 import { Tracker } from '@src/tracking/Tracker';

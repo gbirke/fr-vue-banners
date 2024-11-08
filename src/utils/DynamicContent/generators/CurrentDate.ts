@@ -1,6 +1,6 @@
-import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
-import { Ordinal } from '@src/utils/DynamicContent/formatters/Ordinal';
 import { Translator } from '@src/Translator';
+import { Ordinal } from '@src/utils/DynamicContent/formatters/Ordinal';
+import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
 
 export class CurrentDate implements TextGenerator<Date> {
 	private readonly _translator: Translator;

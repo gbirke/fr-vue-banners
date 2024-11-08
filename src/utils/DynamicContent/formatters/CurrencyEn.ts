@@ -1,5 +1,5 @@
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
 import formatter from 'format-number';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
 import { NumberFormatter } from '@src/utils/DynamicContent/formatters/NumberFormatter';
 
 export class CurrencyEn implements Currency {

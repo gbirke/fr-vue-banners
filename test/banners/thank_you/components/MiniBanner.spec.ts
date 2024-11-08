@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import MiniBanner from '@banners/thank_you/components/MiniBanner.vue';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 

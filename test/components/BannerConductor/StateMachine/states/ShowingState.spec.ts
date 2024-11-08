@@ -2,8 +2,8 @@ import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import { ShowingState } from '@src/components/BannerConductor/StateMachine/states/ShowingState';
 import { Page } from '@src/page/Page';
 import { PageStub } from '@test/fixtures/PageStub';
-import { TimerStub } from '@test/fixtures/TimerStub';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TimerStub } from '@test/fixtures/TimerStub';
 
 describe( 'ShowingState', function () {
 	let page: Page;

@@ -62,10 +62,10 @@
 
 <script setup lang="ts">
 
-import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import FundsDistributionAccordion from '@src/components/UseOfFunds/FundsDistributionAccordion.vue';
-import CompanyBudgets from '@src/components/UseOfFunds/CompanyBudgets.vue';
 import BenefitsIcon from '@src/components/UseOfFunds/BenefitsIcon.vue';
+import CompanyBudgets from '@src/components/UseOfFunds/CompanyBudgets.vue';
+import FundsDistributionAccordion from '@src/components/UseOfFunds/FundsDistributionAccordion.vue';
+import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
 
 interface Props {
 	content: UseOfFundsContent;

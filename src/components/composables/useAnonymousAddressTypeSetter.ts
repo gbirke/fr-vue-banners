@@ -1,7 +1,7 @@
 import { watch } from 'vue';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 
 export function useAnonymousAddressTypeSetter(): void {
 	const formModel = useFormModel();

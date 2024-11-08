@@ -1,6 +1,6 @@
+import { BannerEvent } from '@src/page/MediaWiki/BannerEvent';
 import { LegacyBannerEvent } from '@src/page/MediaWiki/LegacyBannerEvent';
 import { SizeIssue } from '@src/page/MediaWiki/SizeIssue';
-import { BannerEvent } from '@src/page/MediaWiki/BannerEvent';
 
 export interface MediaWiki {
 	getConfigItem( name: string ): any;

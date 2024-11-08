@@ -1,21 +1,21 @@
-import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
-import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
-import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
-import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
-import { mapFormStepShownEvent } from '@src/tracking/LegacyEventTracking/mapFormStepShownEvent';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
-import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
-import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
-import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
 import { AlreadyDonatedShownEvent } from '@src/tracking/events/AlreadyDonatedShownEvent';
+import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { FallbackBannerSubmitEvent } from '@src/tracking/events/FallbackBannerSubmitEvent';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
+import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
+import { mapFormStepShownEvent } from '@src/tracking/LegacyEventTracking/mapFormStepShownEvent';
+import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
 import { mapShownEvent } from '@src/tracking/LegacyEventTracking/mapShownEvent';
-import { BannerMinimisedEvent } from './events/BannerMinimisedEvent';
+import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
+import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
+import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 import { BannerMaximisedEvent } from './events/BannerMaximisedEvent';
+import { BannerMinimisedEvent } from './events/BannerMinimisedEvent';
 
 export default new Map<string, TrackingEventConverterFactory>( [
 	[ ShownEvent.EVENT_NAME, mapShownEvent ],

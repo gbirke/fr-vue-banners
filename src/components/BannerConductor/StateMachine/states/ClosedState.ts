@@ -1,9 +1,9 @@
-import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { Page } from '@src/page/Page';
 import { Tracker } from '@src/tracking/Tracker';
-import { ResizeHandler } from '@src/utils/ResizeHandler';
 import { TrackingEvent } from '@src/tracking/TrackingEvent';
+import { ResizeHandler } from '@src/utils/ResizeHandler';
 import { Timer } from '@src/utils/Timer';
 
 export class ClosedState extends BannerState {

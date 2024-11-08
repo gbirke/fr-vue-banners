@@ -1,9 +1,9 @@
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { CoverTransactionFeesEvent } from '@src/tracking/events/CoverTransactionFeesEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
-import { CoverTransactionFeesEvent } from '@src/tracking/events/CoverTransactionFeesEvent';
 
 export default new Map( [
 	[ CloseEvent.EVENT_NAME, 0.1 ],

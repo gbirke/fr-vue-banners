@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import MembershipButton from '@banners/thank_you/components/MembershipButton.vue';
 import { MembershipFormActions } from '@banners/thank_you/MembershipFormActions';
 

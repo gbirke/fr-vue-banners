@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import ProgressBar from '@banners/thank_you/components/ProgressBar.vue';
 
 describe( 'ProgressBar.vue', () => {

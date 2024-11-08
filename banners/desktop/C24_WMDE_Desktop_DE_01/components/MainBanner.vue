@@ -17,9 +17,9 @@ tart<template>
 
 <script setup lang="ts">
 
-import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
 import { computed, nextTick, ref } from 'vue';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
 
 interface Props {
 	bannerState: BannerStates;

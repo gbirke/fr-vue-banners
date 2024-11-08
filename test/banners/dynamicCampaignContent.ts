@@ -1,5 +1,5 @@
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { DateAndTime } from '@src/utils/DynamicContent/DateAndTime';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 export function newDynamicContent(): DynamicContent {
 	return {

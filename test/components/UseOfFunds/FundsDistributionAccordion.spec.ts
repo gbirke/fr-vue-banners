@@ -1,6 +1,6 @@
+import { shallowMount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import FundsDistributionAccordion from '@src/components/UseOfFunds/FundsDistributionAccordion.vue';
-import { shallowMount } from '@vue/test-utils';
 import { ApplicationOfFundsItem } from '@src/domain/UseOfFunds/ApplicationOfFundsItem';
 
 const applicationOfFundsData: ApplicationOfFundsItem[] = [

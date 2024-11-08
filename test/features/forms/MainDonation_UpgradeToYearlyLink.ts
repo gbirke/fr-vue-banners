@@ -1,4 +1,6 @@
 import { VueWrapper } from '@vue/test-utils';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import {
 	expectMainDonationFormGoesToPageOnSubmit,
 	expectMainDonationFormSubmits,
@@ -8,8 +10,6 @@ import {
 	expectUpgradeToYearlyFormGoesToPageOnLinkClick,
 	expectUpgradeToYearlyFormSubmits
 } from '@test/features/forms/subForms/UpgradeToYearlyForm';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 
 enum Pages {
 	MainDonation = 1,

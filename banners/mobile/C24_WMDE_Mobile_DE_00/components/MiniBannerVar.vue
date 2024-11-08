@@ -40,11 +40,11 @@
 <script setup lang="ts">
 
 import CloseIconMobile from '@src/components/Icons/CloseIconMobile.vue';
-import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
 import SmsIcon from '@src/components/Icons/SmsIcon.vue';
+import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
 import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
-import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
 import SepaLogo from '@src/components/PaymentLogos/SepaLogo.vue';
+import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
 
 defineEmits( [ 'showFullPageBanner', 'showFullPageBannerPreselected', 'close' ] );
 

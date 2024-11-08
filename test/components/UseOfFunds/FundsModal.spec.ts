@@ -1,5 +1,5 @@
+import { mount, shallowMount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
-import { shallowMount, mount } from '@vue/test-utils';
 import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
 import { UseOfFundsContent } from '@src/domain/UseOfFunds/UseOfFundsContent';
 

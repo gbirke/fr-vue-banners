@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import { PendingState } from '@src/components/BannerConductor/StateMachine/states/PendingState';
 import { Page } from '@src/page/Page';
-import { TimerStub } from '@test/fixtures/TimerStub';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TimerStub } from '@test/fixtures/TimerStub';
 
 describe( 'PendingState', function () {
 	let page: Page;

@@ -1,6 +1,6 @@
-const path = require( 'path' );
 const { parse } = require( 'toml' );
 const { readFileSync } = require( 'fs' );
+const path = require( 'path' );
 
 function CampaignConfig( config ) {
 	this.config = config;

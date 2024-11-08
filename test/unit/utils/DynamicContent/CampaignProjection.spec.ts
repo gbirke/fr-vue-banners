@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import TimeRange from '@src/utils/TimeRange';
 import { CampaignProjectionParameters } from '@src/domain/CampaignParameters';
 import { CampaignProjection } from '@src/utils/DynamicContent/CampaignProjection';
+import TimeRange from '@src/utils/TimeRange';
 
 const beforeStartDate = new Date( 2023, 10, 10 );
 const startDate = new Date( 2023, 10, 11 );

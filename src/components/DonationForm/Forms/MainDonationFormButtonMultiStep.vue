@@ -6,10 +6,10 @@
 
 <script setup lang="ts">
 import { computed, inject } from 'vue';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import { useFormModel } from '@src/components/composables/useFormModel';
 import { Translator } from '@src/Translator';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 
 const formModel = useFormModel();
 const translator = inject<Translator>( 'translator' );

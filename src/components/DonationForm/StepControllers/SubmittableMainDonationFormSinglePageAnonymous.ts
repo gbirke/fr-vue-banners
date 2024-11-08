@@ -2,8 +2,8 @@ import { StepController } from '@src/components/DonationForm/StepController';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
-import { FormModel } from '@src/utils/FormModel/FormModel';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { FormModel } from '@src/utils/FormModel/FormModel';
 
 export function createSubmittableMainDonationFormSinglePageAnonymous( formModel: FormModel ): StepController {
 	return {

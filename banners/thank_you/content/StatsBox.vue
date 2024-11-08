@@ -30,7 +30,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-import PeopleIcon from '../components/icons/PeopleIcon.vue';
 import HandIcon from '../components/icons/HandIcon.vue';
 import MoneyIcon from '../components/icons/MoneyIcon.vue';
+import PeopleIcon from '../components/icons/PeopleIcon.vue';
 </script>

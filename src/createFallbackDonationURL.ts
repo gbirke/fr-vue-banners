@@ -1,6 +1,6 @@
+import { createDonationURL } from '@src/createDonationURL';
 import { TrackingParameters } from '@src/domain/TrackingParameters';
 import { ImpressionCount } from '@src/utils/ImpressionCount';
-import { createDonationURL } from '@src/createDonationURL';
 
 /**
  * This function is used for the fallback banner, as it replaces the usual tracking parameters with mini

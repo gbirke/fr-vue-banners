@@ -2,8 +2,8 @@
  * Wrap javascript assets in MediaWiki wikitext and script tags for inlining them in wiki pages
  */
 
-const Minimatch = require( 'minimatch' ).Minimatch;
 const Handlebars = require( 'handlebars' );
+const Minimatch = require( 'minimatch' ).Minimatch;
 
 function MediaWikiTextWrapper( options ) {
 	this.templates = {};

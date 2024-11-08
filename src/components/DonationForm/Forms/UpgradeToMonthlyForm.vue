@@ -91,13 +91,13 @@ export default {
 
 import { inject, ref, watch } from 'vue';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { Validity } from '@src/utils/FormModel/Validity';
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
-import { Tracker } from '@src/tracking/Tracker';
-import { UpgradeToMonthlyEvent } from '@src/tracking/events/UpgradeToMonthlyEvent';
 import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import { UpgradeToMonthlyEvent } from '@src/tracking/events/UpgradeToMonthlyEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { Validity } from '@src/utils/FormModel/Validity';
 
 interface AmountSuggestion {
 	lowerRangeLimit: number,

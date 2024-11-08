@@ -1,6 +1,6 @@
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
 import { Translator } from '@src/Translator';
 import { DynamicProgressBarContent } from '@src/utils/DynamicContent/DynamicProgressBarContent';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
 
 export class ProgressBarContent implements DynamicProgressBarContent {
 	private readonly _donationTarget: number;

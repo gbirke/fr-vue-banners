@@ -1,5 +1,5 @@
-import { Timer } from '@src/utils/Timer';
 import { nextTick } from 'vue';
+import { Timer } from '@src/utils/Timer';
 
 export class TimerSpy implements Timer {
 	public clearAllCalls: number = 0;

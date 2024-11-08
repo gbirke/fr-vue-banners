@@ -1,15 +1,15 @@
 import { VueWrapper } from '@vue/test-utils';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
-import { Tracker } from '@src/tracking/Tracker';
 import { expect, vi } from 'vitest';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { CloseChoices } from '@src/domain/CloseChoices';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { newDynamicContent } from '@test/banners/dynamicCampaignContent';
-import { TrackerSpy } from '@test/fixtures/TrackerSpy';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { FallbackBannerSubmitEvent } from '@src/tracking/events/FallbackBannerSubmitEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { Timer } from '@src/utils/Timer';
+import { newDynamicContent } from '@test/banners/dynamicCampaignContent';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TrackerSpy } from '@test/fixtures/TrackerSpy';
 
 const showsTheSmallBanner = async ( getWrapperAtWidth: ( width: number ) => VueWrapper<any> ): Promise<any> => {
 	const wrapper = getWrapperAtWidth( 799 );

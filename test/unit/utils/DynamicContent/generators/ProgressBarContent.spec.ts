@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { ProgressBarContent } from '@src/utils/DynamicContent/generators/ProgressBarContent';
 import { Translator } from '@src/Translator';
 import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
+import { ProgressBarContent } from '@src/utils/DynamicContent/generators/ProgressBarContent';
 
 describe( 'ProgressBarContent', function () {
 	const progressBarContent = new ProgressBarContent(

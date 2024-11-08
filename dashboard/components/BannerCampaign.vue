@@ -83,16 +83,16 @@
 
 <script setup lang="ts">
 
-import IconShutterbug from './IconShutterbug.vue';
 import BannerActions from './BannerActions.vue';
-import DeviceMobile from './DeviceMobile.vue';
 import DeviceDesktop from './DeviceDesktop.vue';
+import DeviceMobile from './DeviceMobile.vue';
+import DevicePad from './DevicePad.vue';
 import IconCommand from './IconCommand.vue';
 import IconInfo from './IconInfo.vue';
-import DevicePad from './DevicePad.vue';
+import IconPullRequest from './IconPullRequest.vue';
+import IconShutterbug from './IconShutterbug.vue';
 import { Campaign } from '../../webpack/campaign_config_types';
 import { CompileInfo } from '../util';
-import IconPullRequest from './IconPullRequest.vue';
 
 interface Props {
 	campaign: Campaign,

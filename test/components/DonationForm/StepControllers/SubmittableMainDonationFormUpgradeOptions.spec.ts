@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it, test, vi } from 'vitest';
-import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { resetFormModel } from '@test/resetFormModel';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import {
 	createSubmittableMainDonationFormUpgradeOptions
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationFormUpgradeOptions';
-import { useFormModel } from '@src/components/composables/useFormModel';
+import { StepAction } from '@src/components/DonationForm/StepNavigation';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

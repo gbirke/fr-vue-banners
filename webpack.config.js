@@ -1,13 +1,13 @@
+const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
+const toml = require( 'toml' );
+const webpack = require( 'webpack' );
+const { merge } = require( 'webpack-merge' );
+const { exec } = require( 'child_process' );
 const fs = require( 'fs/promises' );
 const path = require( 'path' );
-const toml = require( 'toml' );
-const { merge } = require( 'webpack-merge' );
-const CommonConfig = require( './webpack.common.js' );
-const webpack = require( 'webpack' );
-const { exec } = require( 'child_process' );
 const webpackBuildApiRoute = require( './webpack/build_api' );
 const { campaignInfoToCampaignConfig } = require( './webpack/convert_info_to_type' );
-const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
+const CommonConfig = require( './webpack.common.js' );
 
 const getBranch = () => new Promise( ( resolve ) => {
 	return exec( 'git rev-parse --abbrev-ref HEAD', ( err, stdout ) => {

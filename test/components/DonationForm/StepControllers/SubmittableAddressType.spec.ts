@@ -1,10 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { createSubmittableAddressType } from '@src/components/DonationForm/StepControllers/SubmittableAddressType';
 import { useFormModel } from '@src/components/composables/useFormModel';
+import { createSubmittableAddressType } from '@src/components/DonationForm/StepControllers/SubmittableAddressType';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { resetFormModel } from '@test/resetFormModel';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { Validity } from '@src/utils/FormModel/Validity';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

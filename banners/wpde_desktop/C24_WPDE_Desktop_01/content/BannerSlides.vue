@@ -35,11 +35,11 @@
 </template>
 
 <script setup lang="ts">
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { inject, onMounted, onUnmounted } from 'vue';
+import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
 import InfoIcon from '@src/components/Icons/InfoIcon.vue';
 import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
-import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 interface Props {
 	currentSlide: number

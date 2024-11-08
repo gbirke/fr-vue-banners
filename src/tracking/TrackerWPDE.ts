@@ -1,10 +1,10 @@
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { ShownEvent } from '@src/tracking/events/ShownEvent';
 import { Tracker } from '@src/tracking/Tracker';
 import { TrackingEvent } from '@src/tracking/TrackingEvent';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { RuntimeEnvironment } from '@src/utils/RuntimeEnvironment';
-import { ShownEvent } from '@src/tracking/events/ShownEvent';
 
 type TrackingRatesForEvents = Map<string, number>;
 

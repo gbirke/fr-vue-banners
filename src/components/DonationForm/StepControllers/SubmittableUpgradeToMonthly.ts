@@ -1,8 +1,8 @@
 import { StepController } from '@src/components/DonationForm/StepController';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { FormModel } from '@src/utils/FormModel/FormModel';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { FormModel } from '@src/utils/FormModel/FormModel';
 
 export function createSubmittableUpgradeToMonthly( formModel: FormModel, stepNameOfLinkClick: string, stepNameOfPreviousPage: string ): StepController {
 	return {

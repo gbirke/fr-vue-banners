@@ -1,13 +1,13 @@
-import { beforeEach, describe, expect, it } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { resetFormModel } from '@test/resetFormModel';
-import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { UpgradeToYearlyEvent } from '@src/tracking/events/UpgradeToYearlyEvent';
+import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { TrackerSpy } from '@test/fixtures/TrackerSpy';
-import { UpgradeToYearlyEvent } from '@src/tracking/events/UpgradeToYearlyEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

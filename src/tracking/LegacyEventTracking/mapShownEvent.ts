@@ -1,7 +1,7 @@
-import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
-import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
 import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
+import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
+import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 
 export function mapShownEvent( shownEvent: ShownEvent ): WMDESizeIssueEvent|WMDELegacyBannerEvent {
 	if ( shownEvent.feature === 'FallbackBanner' ) {

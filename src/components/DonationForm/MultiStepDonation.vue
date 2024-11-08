@@ -18,15 +18,15 @@
 
 <script setup lang="ts">
 
-import { computed, inject, nextTick, onMounted, ref, useSlots } from 'vue';
 import { useKeenSlider } from 'keen-slider/vue';
-import SubmitValues from '@src/components/DonationForm/SubComponents/SubmitValues.vue';
+import { computed, inject, nextTick, onMounted, ref, useSlots } from 'vue';
+import { useFormAction } from '@src/components/composables/useFormAction';
 import { StepController } from '@src/components/DonationForm/StepController';
-import { PageScroller } from '@src/utils/PageScroller/PageScroller';
+import SubmitValues from '@src/components/DonationForm/SubComponents/SubmitValues.vue';
+import { FormActions } from '@src/domain/FormActions';
 import { Tracker } from '@src/tracking/Tracker';
 import { TrackingEvent } from '@src/tracking/TrackingEvent';
-import { useFormAction } from '@src/components/composables/useFormAction';
-import { FormActions } from '@src/domain/FormActions';
+import { PageScroller } from '@src/utils/PageScroller/PageScroller';
 import { Timer } from '@src/utils/Timer';
 
 interface Props {

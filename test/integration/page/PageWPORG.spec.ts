@@ -1,13 +1,13 @@
-import { beforeEach, describe, expect, it, vi, vitest } from 'vitest';
-import PageWPORG, { bannerAppId } from '@src/page/PageWPORG';
-import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
-import { SkinStub } from '@test/fixtures/SkinStub';
-import { SizeIssueCheckerStub } from '@test/fixtures/SizeIssueCheckerStub';
-import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
-import { Vector2 } from '@src/utils/Vector2';
 import { JSDOM } from 'jsdom';
+import { beforeEach, describe, expect, it, vi, vitest } from 'vitest';
 import { CloseChoices } from '@src/domain/CloseChoices';
+import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
+import PageWPORG, { bannerAppId } from '@src/page/PageWPORG';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { Vector2 } from '@src/utils/Vector2';
+import { SizeIssueCheckerStub } from '@test/fixtures/SizeIssueCheckerStub';
+import { SkinStub } from '@test/fixtures/SkinStub';
 
 describe( 'PageWPORG', function () {
 	let mediaWiki: MediaWiki;

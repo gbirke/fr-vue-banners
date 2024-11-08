@@ -1,8 +1,8 @@
-import { describe, expect, it, vi, test } from 'vitest';
-import { LegacyTrackerWPORG, TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
-import { MediaWikiStub } from '@test/fixtures/MediaWikiStub';
-import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
+import { describe, expect, it, test, vi } from 'vitest';
 import { ClickAlreadyDonatedEvent } from '@src/tracking/events/ClickAlreadyDonatedEvent';
+import { LegacyTrackerWPORG, TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
+import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
+import { MediaWikiStub } from '@test/fixtures/MediaWikiStub';
 
 describe( 'LegacyTrackerWPORG', function () {
 

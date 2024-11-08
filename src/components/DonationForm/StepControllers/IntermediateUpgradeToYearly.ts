@@ -1,7 +1,7 @@
 import { StepController } from '@src/components/DonationForm/StepController';
+import { StepAction } from '@src/components/DonationForm/StepNavigation';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { FormModel } from '@src/utils/FormModel/FormModel';
-import { StepAction } from '@src/components/DonationForm/StepNavigation';
 
 export function createIntermediateUpgradeToYearly(
 	formModel: FormModel,

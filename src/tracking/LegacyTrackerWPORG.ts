@@ -1,6 +1,6 @@
+import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
 import { Tracker } from '@src/tracking/Tracker';
 import { TrackingEvent } from '@src/tracking/TrackingEvent';
-import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
 import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
 import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 import { RuntimeEnvironment } from '@src/utils/RuntimeEnvironment';

@@ -1,12 +1,12 @@
-import CustomAmountFormDe from '@src/components/DonationForm/Forms/messages/CustomAmountForm.de';
-import DynamicCampaignTextDe from '@src/utils/DynamicContent/messages/DynamicCampaignText.de';
-import { TranslationMessages } from '@src/Translator';
-import UpgradeToYearlyDe from '@src/components/DonationForm/Forms/messages/UpgradeToYearly.de';
-import AddressFormDe from '@src/components/DonationForm/Forms/messages/AddressForm.de';
-import FooterDe from '@src/components/Footer/messages/Footer.de';
-import MainDonationFormDe from '@src/components/DonationForm/Forms/messages/MainDonationForm.de';
-import FallbackBanner from '@src/components/FallbackBanner/messages/FallbackBanner.de';
 import AlreadyDonatedModal from '@src/components/AlreadyDonatedModal/translations/AlreadyDonatedModal.de';
+import AddressFormDe from '@src/components/DonationForm/Forms/messages/AddressForm.de';
+import CustomAmountFormDe from '@src/components/DonationForm/Forms/messages/CustomAmountForm.de';
+import MainDonationFormDe from '@src/components/DonationForm/Forms/messages/MainDonationForm.de';
+import UpgradeToYearlyDe from '@src/components/DonationForm/Forms/messages/UpgradeToYearly.de';
+import FallbackBanner from '@src/components/FallbackBanner/messages/FallbackBanner.de';
+import FooterDe from '@src/components/Footer/messages/Footer.de';
+import { TranslationMessages } from '@src/Translator';
+import DynamicCampaignTextDe from '@src/utils/DynamicContent/messages/DynamicCampaignText.de';
 
 const messages: TranslationMessages = {
 	...CustomAmountFormDe,

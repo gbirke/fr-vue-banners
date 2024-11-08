@@ -1,6 +1,6 @@
 import { VueWrapper } from '@vue/test-utils';
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { expect } from 'vitest';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 
 const expectSlideShowPlaysWhenMiniBannerBecomesVisible = async ( wrapper: VueWrapper<any> ): Promise<any> => {
 	await wrapper.setProps( { bannerState: BannerStates.Visible } );

@@ -74,26 +74,26 @@
 
 <script setup lang="ts">
 import { inject, ref } from 'vue';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import MiniBanner from './MiniBanner.vue';
-import FullPageBanner from './FullPageBanner.vue';
-import colors from '../styles/settings/colors';
-import MiniBannerTextWin from '../content/win/MiniBannerText.en.vue';
-import MiniBannerSlidesWin from '../content/win/MiniBannerSlides.en.vue';
-import FullPageBannerTextWin from '../content/win/FullPageBannerText.en.vue';
-import MiniBannerTextLose from '../content/lose/MiniBannerText.en.vue';
-import MiniBannerSlidesLose from '../content/lose/MiniBannerSlides.en.vue';
-import FullPageBannerTextLose from '../content/lose/FullPageBannerText.en.vue';
-import MembershipBenefits from '../content/MembershipBenefits.en.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import ProgressBar from './ProgressBar.vue';
-import { Tracker } from '@src/tracking/Tracker';
-import { ThankYouModalShownEvent } from '@src/tracking/events/ThankYouModalShownEvent';
-import MembershipFormButton from './MembershipButton.vue';
-import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
-import { ThankYouSettings } from '../settings';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { ThankYouModalShownEvent } from '@src/tracking/events/ThankYouModalShownEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import FullPageBanner from './FullPageBanner.vue';
+import MembershipFormButton from './MembershipButton.vue';
+import MiniBanner from './MiniBanner.vue';
+import ProgressBar from './ProgressBar.vue';
+import FullPageBannerTextLose from '../content/lose/FullPageBannerText.en.vue';
+import MiniBannerSlidesLose from '../content/lose/MiniBannerSlides.en.vue';
+import MiniBannerTextLose from '../content/lose/MiniBannerText.en.vue';
+import MembershipBenefits from '../content/MembershipBenefits.en.vue';
+import FullPageBannerTextWin from '../content/win/FullPageBannerText.en.vue';
+import MiniBannerSlidesWin from '../content/win/MiniBannerSlides.en.vue';
+import MiniBannerTextWin from '../content/win/MiniBannerText.en.vue';
+import { ThankYouSettings } from '../settings';
+import colors from '../styles/settings/colors';
 
 enum ContentStates {
 	Mini = 'wmde-banner-wrapper--mini',

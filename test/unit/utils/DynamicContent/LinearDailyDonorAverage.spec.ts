@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { DailyDonorStatsValues } from '@src/utils/DynamicContent/DailyDonorAverage';
-import { LinearDailyDonorAverage } from '@src/utils/DynamicContent/LinearDailyDonorAverage';
 import { IntegerEn } from '@src/utils/DynamicContent/formatters/IntegerEn';
+import { LinearDailyDonorAverage } from '@src/utils/DynamicContent/LinearDailyDonorAverage';
 
 const averageDailyDonors = 4760;
 describe( 'LinearDailyDonorAverage', () => {

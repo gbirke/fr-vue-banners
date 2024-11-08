@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import HighlightedText from '@src/components/AnimatedText/AnimatedText.vue';
 
 describe( 'AnimatedText.vue', () => {

@@ -1,6 +1,6 @@
 import { BannerStateMachine } from '@src/components/BannerConductor/StateMachine/BannerStateMachine';
-import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 
 export class BannerStateMachineSpy extends BannerStateMachine {
 	public statesCalled: BannerStates[] = [];

@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import { VisibleState } from '@src/components/BannerConductor/StateMachine/states/VisibleState';
-import { PageStub } from '@test/fixtures/PageStub';
-import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
-import { Tracker } from '@src/tracking/Tracker';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
+import { PageStub } from '@test/fixtures/PageStub';
 
 describe( 'VisibleState', function () {
 	let tracker: Tracker;

@@ -1,10 +1,10 @@
-import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { BannerState } from '@src/components/BannerConductor/StateMachine/states/BannerState';
 import { Page } from '@src/page/Page';
-import { ImpressionCount } from '@src/utils/ImpressionCount';
-import { Tracker } from '@src/tracking/Tracker';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
+import { Tracker } from '@src/tracking/Tracker';
 import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import { ImpressionCount } from '@src/utils/ImpressionCount';
 
 export class VisibleState extends BannerState {
 	public readonly stateName: BannerStates = BannerStates.Visible;

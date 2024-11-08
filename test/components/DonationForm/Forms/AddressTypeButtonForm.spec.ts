@@ -1,14 +1,14 @@
-import { beforeEach, describe, expect, it } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { nextTick } from 'vue';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import AddressTypeButtonForm from '@src/components/DonationForm/Forms/AddressTypeButtonForm.vue';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { DonationFormItems } from '@src/utils/FormItemsBuilder/DonationFormItems';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { resetFormModel } from '@test/resetFormModel';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { nextTick } from 'vue';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { TrackerSpy } from '@test/fixtures/TrackerSpy';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

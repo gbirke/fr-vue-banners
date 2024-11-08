@@ -1,8 +1,8 @@
-import { FormModel } from '@src/utils/FormModel/FormModel';
 import { StepController } from '@src/components/DonationForm/StepController';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { Validity } from '@src/utils/FormModel/Validity';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { FormModel } from '@src/utils/FormModel/FormModel';
+import { Validity } from '@src/utils/FormModel/Validity';
 
 export function createSubmittableAddressType( formModel: FormModel, pageIndexForPrevious: string ): StepController {
 	return {

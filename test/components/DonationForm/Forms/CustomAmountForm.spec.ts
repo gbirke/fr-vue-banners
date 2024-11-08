@@ -1,12 +1,12 @@
-import { beforeEach, describe, expect, it, test } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, test } from 'vitest';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import CustomAmountForm from '@src/components/DonationForm/Forms/CustomAmountForm.vue';
-import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import { TrackerSpy } from '@test/fixtures/TrackerSpy';
 import { resetFormModel } from '@test/resetFormModel';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 
 const formModel = useFormModel();
 

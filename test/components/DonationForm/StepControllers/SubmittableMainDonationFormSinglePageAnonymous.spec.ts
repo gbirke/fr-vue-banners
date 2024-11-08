@@ -1,13 +1,12 @@
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import {
 	createSubmittableMainDonationFormSinglePageAnonymous
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationFormSinglePageAnonymous';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { beforeEach } from 'vitest';
-import { resetFormModel } from '@test/resetFormModel';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

@@ -1,6 +1,6 @@
+import { shallowMount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { shallowMount } from '@vue/test-utils';
 import MainDonationFormButtonMultiStepAmount
 	from '@src/components/DonationForm/Forms/MainDonationFormButtonMultiStepAmount.vue';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';

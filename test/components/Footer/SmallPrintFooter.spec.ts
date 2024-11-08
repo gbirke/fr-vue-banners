@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import SmallPrintFooter from '@src/components/Footer/SmallPrintFooter.vue';
 
 describe( 'SmallPrintFooter.vue', () => {

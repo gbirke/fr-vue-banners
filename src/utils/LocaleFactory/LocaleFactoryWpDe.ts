@@ -1,12 +1,12 @@
-import { LocaleFactory } from '@src/utils/LocaleFactory';
-import { CurrencyDe } from '@src/utils/DynamicContent/formatters/CurrencyDe';
-import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
 import { Formatters } from '@src/utils/DynamicContent/Formatters';
-import { FundsContentLoader } from '@src/utils/UseOfFunds/FundsContentLoader';
-import { OrdinalDe } from '@src/utils/DynamicContent/formatters/OrdinalDe';
+import { Currency } from '@src/utils/DynamicContent/formatters/Currency';
+import { CurrencyDe } from '@src/utils/DynamicContent/formatters/CurrencyDe';
 import { IntegerDe } from '@src/utils/DynamicContent/formatters/IntegerDe';
-import { DeJSONFundsContentLoader } from '@src/utils/UseOfFunds/DeJSONFundsContentLoader';
+import { OrdinalDe } from '@src/utils/DynamicContent/formatters/OrdinalDe';
 import { TimeDe } from '@src/utils/DynamicContent/formatters/TimeDe';
+import { LocaleFactory } from '@src/utils/LocaleFactory';
+import { DeJSONFundsContentLoader } from '@src/utils/UseOfFunds/DeJSONFundsContentLoader';
+import { FundsContentLoader } from '@src/utils/UseOfFunds/FundsContentLoader';
 
 export class LocaleFactoryWpDe implements LocaleFactory {
 	private readonly _currencyFormatter: Currency;

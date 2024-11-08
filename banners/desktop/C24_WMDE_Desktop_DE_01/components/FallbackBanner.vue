@@ -51,25 +51,25 @@
 
 <script setup lang="ts">
 
-import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
 import { computed, inject, ref } from 'vue';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import FallbackSlides from '../content/FallbackSlides.vue';
+import FallbackButton from '@src/components/FallbackBanner/FallbackButton.vue';
+import LargeFooter from '@src/components/FallbackBanner/LargeFooter.vue';
+import SmallFooter from '@src/components/FallbackBanner/SmallFooter.vue';
 import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
 import ChevronRightIcon from '@src/components/Icons/ChevronRightIcon.vue';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
 import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import FallbackText from '../content/FallbackText.vue';
-import FallbackButton from '@src/components/FallbackBanner/FallbackButton.vue';
-import SmallFooter from '@src/components/FallbackBanner/SmallFooter.vue';
-import LargeFooter from '@src/components/FallbackBanner/LargeFooter.vue';
-import { Tracker } from '@src/tracking/Tracker';
-import { FallbackBannerSubmitEvent } from '@src/tracking/events/FallbackBannerSubmitEvent';
 import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { FallbackBannerSubmitEvent } from '@src/tracking/events/FallbackBannerSubmitEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import FallbackSlides from '../content/FallbackSlides.vue';
+import FallbackText from '../content/FallbackText.vue';
 
 interface Props {
 	bannerState: BannerStates;

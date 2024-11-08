@@ -1,6 +1,6 @@
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
 

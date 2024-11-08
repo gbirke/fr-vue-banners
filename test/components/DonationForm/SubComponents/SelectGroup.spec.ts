@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, it } from 'vitest';
 import { shallowMount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it } from 'vitest';
 import SelectGroup from '@src/components/DonationForm/SubComponents/SelectGroup.vue';
 
 describe( 'SelectGroup.vue', () => {

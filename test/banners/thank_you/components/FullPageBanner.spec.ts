@@ -1,5 +1,5 @@
-import { describe, expect, it, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { describe, expect, it, vi } from 'vitest';
 import FullPageBanner from '@banners/thank_you/components/FullPageBanner.vue';
 import { Tracker } from '@src/tracking/Tracker';
 

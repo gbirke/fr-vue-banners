@@ -1,5 +1,5 @@
-const path = require( 'path' );
 const { VueLoaderPlugin } = require( 'vue-loader' );
+const path = require( 'path' );
 
 const CampaignConfig = require( './webpack/campaign_config' );
 

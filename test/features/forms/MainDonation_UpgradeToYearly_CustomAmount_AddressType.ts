@@ -1,4 +1,9 @@
 import { VueWrapper } from '@vue/test-utils';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { expectAddressTypeFormSubmits } from '@test/features/forms/subForms/AddressTypeForm';
+import { expectCustomAmountFormGoesToPageOnSubmit } from '@test/features/forms/subForms/CustomAmountForm';
 import {
 	expectMainDonationFormGoesToPageOnSubmit,
 	submitMainDonationForm
@@ -7,11 +12,6 @@ import {
 	expectUpgradeToYearlyFormGoesToPageOnLinkClick,
 	expectUpgradeToYearlyFormGoesToPageOnSubmit
 } from '@test/features/forms/subForms/UpgradeToYearlyForm';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { expectCustomAmountFormGoesToPageOnSubmit } from '@test/features/forms/subForms/CustomAmountForm';
-import { expectAddressTypeFormSubmits } from '@test/features/forms/subForms/AddressTypeForm';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 
 enum Pages {
 	UpgradeToYearly = 2,

@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { resetFormModel } from '@test/resetFormModel';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
 import {
 	createSubmittableUpgradeToMonthly
 } from '@src/components/DonationForm/StepControllers/SubmittableUpgradeToMonthly';
+import { StepAction } from '@src/components/DonationForm/StepNavigation';
+import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

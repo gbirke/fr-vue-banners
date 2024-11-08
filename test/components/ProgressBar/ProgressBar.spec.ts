@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils';
+import { beforeEach, describe, expect, it } from 'vitest';
 import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
-import { describe, it, expect, beforeEach } from 'vitest';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { DateAndTime } from '@src/utils/DynamicContent/DateAndTime';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 describe( 'ProgressBar.vue', () => {
 	let dynamicCampaignContent: DynamicContent;

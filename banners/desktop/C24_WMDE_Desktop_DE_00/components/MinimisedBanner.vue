@@ -22,8 +22,8 @@
 </template>
 
 <script setup lang="ts">
-import MinimisedText from '../content/MinimisedText.vue';
 import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import ChevronDownIcon from '@src/components/Icons/ChevronDownIcon.vue';
+import MinimisedText from '../content/MinimisedText.vue';
 defineEmits( [ 'close', 'maximise', 'maximise-cta' ] );
 </script>

@@ -21,9 +21,9 @@
 </template>
 
 <script setup lang="ts">
-import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
-import ProgressBar from '@src/components/ProgressBar/ProgressBarAlternative.vue';
 import FallbackBank from '@src/components/FallbackBanner/FallbackBank.vue';
+import ProgressBar from '@src/components/ProgressBar/ProgressBarAlternative.vue';
+import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
 
 interface Props {
 	currentSlide: number

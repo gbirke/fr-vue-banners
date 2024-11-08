@@ -14,9 +14,9 @@
 
 <script setup lang="ts">
 import { inject } from 'vue';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
-import InfoIcon from '@src/components/Icons/InfoIcon.vue';
 import AnimatedText from '@src/components/AnimatedText/AnimatedText.vue';
+import InfoIcon from '@src/components/Icons/InfoIcon.vue';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 const {
 	campaignDaySentence,

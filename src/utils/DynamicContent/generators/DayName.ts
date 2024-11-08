@@ -1,5 +1,5 @@
-import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
 import { Translator } from '@src/Translator';
+import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
 
 const specialDayNameMessageKeys: { [ key: string ]: string } = {
 	'12/06': 'day-name-st-nicholas-day',

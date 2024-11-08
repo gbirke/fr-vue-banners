@@ -5,8 +5,8 @@
  * @file
  */
 
-const { ConcatSource } = require( 'webpack-sources' );
 const { Compilation, ModuleFilenameHelpers } = require( 'webpack' );
+const { ConcatSource } = require( 'webpack-sources' );
 
 const loaderPrefix = ( url ) => `
 		/* Vue loader wrapper inserted by webpack load_vue_on_wpde */

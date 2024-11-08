@@ -1,9 +1,9 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect } from 'vitest';
 
-import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 
 const setMainDonationFormValues = async ( wrapper: VueWrapper<any>, interval: FormItem, amount: string, payment: FormItem ): Promise<void> => {
 	await wrapper.find( `.${interval.className} .wmde-banner-select-group-input` ).setValue();

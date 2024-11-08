@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
+import type { App, Component } from 'vue';
 import config from '@environment/config';
-import type { Component, App } from 'vue';
 
 // Declare external "Vue" object, which might or might not exist
 // In Production it's a global variable, in the dev environment it's undefined

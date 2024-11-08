@@ -1,5 +1,5 @@
-import { TrackingEvent, TrackingFeatureName } from '@src/tracking/TrackingEvent';
 import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { TrackingEvent, TrackingFeatureName } from '@src/tracking/TrackingEvent';
 
 export interface NotShownCustomData {
 	reason: BannerNotShownReasons;

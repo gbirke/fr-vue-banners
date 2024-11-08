@@ -3,10 +3,10 @@ import { NotShownState } from '@src/components/BannerConductor/StateMachine/stat
 import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
 import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
 import { PageStub } from '@test/fixtures/PageStub';
-import { TrackerStub } from '@test/fixtures/TrackerStub';
 import { ResizeHandlerStub } from '@test/fixtures/ResizeHandlerStub';
-import { TimerStub } from '@test/fixtures/TimerStub';
 import { TimerSpy } from '@test/fixtures/TimerSpy';
+import { TimerStub } from '@test/fixtures/TimerStub';
+import { TrackerStub } from '@test/fixtures/TrackerStub';
 
 describe( 'NotShownState', function () {
 	it( 'tracks not shown event on enter', function () {

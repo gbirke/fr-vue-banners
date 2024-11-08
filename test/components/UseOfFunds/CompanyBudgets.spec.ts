@@ -1,6 +1,6 @@
+import { shallowMount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
 import CompanyBudgets from '@src/components/UseOfFunds/CompanyBudgets.vue';
-import { shallowMount } from '@vue/test-utils';
 import { Company } from '@src/domain/UseOfFunds/Company';
 
 const companies: Company[] = [

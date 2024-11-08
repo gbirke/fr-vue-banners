@@ -44,18 +44,18 @@ export default {
 </script>
 
 <script setup lang="ts">
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import { isValidOrUnset } from '@src/components/DonationForm/Forms/isValidOrUnset';
-import SelectGroup from '@src/components/DonationForm/SubComponents/SelectGroup.vue';
 import { computed, inject } from 'vue';
+import { useFormModel } from '@src/components/composables/useFormModel';
+import { isValidOrUnset } from '@src/components/DonationForm/Forms/isValidOrUnset';
+import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
+import SelectGroup from '@src/components/DonationForm/SubComponents/SelectGroup.vue';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import { Tracker } from '@src/tracking/Tracker';
+import { Translator } from '@src/Translator';
 import { DonationFormItems } from '@src/utils/FormItemsBuilder/DonationFormItems';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
-import { useFormModel } from '@src/components/composables/useFormModel';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import { Validity } from '@src/utils/FormModel/Validity';
-import { Translator } from '@src/Translator';
-import { Tracker } from '@src/tracking/Tracker';
-import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFormStepShownEvent';
 
 interface Props {
 	isCurrent: boolean

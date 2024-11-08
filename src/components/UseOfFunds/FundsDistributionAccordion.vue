@@ -20,9 +20,9 @@
 
 <script setup lang="ts">
 
-import { ApplicationOfFundsItem } from '@src/domain/UseOfFunds/ApplicationOfFundsItem';
 import { ref } from 'vue';
 import ChevronDownIcon from '@src/components/Icons/ChevronDownIcon.vue';
+import { ApplicationOfFundsItem } from '@src/domain/UseOfFunds/ApplicationOfFundsItem';
 
 interface Props {
 	applicationOfFundsData: ApplicationOfFundsItem[]

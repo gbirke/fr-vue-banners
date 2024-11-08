@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { createSubmittableCustomAmount } from '@src/components/DonationForm/StepControllers/SubmittableCustomAmount';
 import { useFormModel } from '@src/components/composables/useFormModel';
+import { createSubmittableCustomAmount } from '@src/components/DonationForm/StepControllers/SubmittableCustomAmount';
 import { StepAction } from '@src/components/DonationForm/StepNavigation';
-import { resetFormModel } from '@test/resetFormModel';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 

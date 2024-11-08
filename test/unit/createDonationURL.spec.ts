@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
 import { createDonationURL } from '@src/createDonationURL';
+import { ImpressionCountStub } from '@test/fixtures/ImpressionCountStub';
 
 describe( 'createDonationURL', () => {
 	it( 'should create donation URL with tracking information', () => {

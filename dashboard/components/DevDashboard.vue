@@ -49,12 +49,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Campaign, CampaignConfig } from '../../webpack/campaign_config_types';
-import IconGit from './IconGit.vue';
-import IconRefresh from './IconRefresh.vue';
-import { CompileInfo, parseCompileInfo } from '../util';
 import { computed, onMounted, ref } from 'vue';
 import BannerCampaign from './BannerCampaign.vue';
+import IconGit from './IconGit.vue';
+import IconRefresh from './IconRefresh.vue';
+import type { Campaign, CampaignConfig } from '../../webpack/campaign_config_types';
+import { CompileInfo, parseCompileInfo } from '../util';
 
 const props = defineProps<{ campaigns: CampaignConfig, gitBranch: string }>();
 let branchName = ref<string>( props.gitBranch );

@@ -1,15 +1,15 @@
+import { getCampaignParameterOverride } from '@environment/CampaignParameterOverride';
+import { CampaignParameters } from '@src/domain/CampaignParameters';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { TrackingParameters } from '@src/domain/TrackingParameters';
+import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { ChannelNameWPORG } from '@src/page/ChannelNameWPORG';
+import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
 import { Page } from '@src/page/Page';
 import { Skin } from '@src/page/skin/Skin';
-import { MediaWiki } from '@src/page/MediaWiki/MediaWiki';
-import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { TrackingEvent } from '@src/tracking/TrackingEvent';
 import { SizeIssueChecker } from '@src/utils/SizeIssueChecker/SizeIssueChecker';
 import { Vector2 } from '@src/utils/Vector2';
-import { CampaignParameters } from '@src/domain/CampaignParameters';
-import { getCampaignParameterOverride } from '@environment/CampaignParameterOverride';
-import { TrackingParameters } from '@src/domain/TrackingParameters';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { TrackingEvent } from '@src/tracking/TrackingEvent';
-import { ChannelNameWPORG } from '@src/page/ChannelNameWPORG';
 
 export const bannerAppId = 'wmde-banner-app';
 export const bannerAnimatedClass = 'wmde-animate-banner';

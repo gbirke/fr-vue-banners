@@ -1,9 +1,9 @@
+import { shallowMount } from '@vue/test-utils';
 import { describe, expect, test } from 'vitest';
 import { useFormModel } from '@src/components/composables/useFormModel';
-import { shallowMount } from '@vue/test-utils';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import MainDonationFormPaymentMethodLabeledButton
 	from '@src/components/DonationForm/Forms/MainDonationFormPaymentMethodLabeledButton.vue';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 
 const translate = ( key: string ): string => key;
 

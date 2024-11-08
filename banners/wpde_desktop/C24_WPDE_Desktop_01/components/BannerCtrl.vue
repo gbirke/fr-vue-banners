@@ -105,41 +105,41 @@
 </template>
 
 <script setup lang="ts">
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { ref, watch } from 'vue';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import MainBanner from './MainBanner.vue';
-import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
-import BannerSlides from '../content/BannerSlides.vue';
-import BannerText from '../content/BannerText.vue';
-import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
-import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
-import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
-import ChevronRightIcon from '@src/components/Icons/ChevronRightIcon.vue';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { useFormModel } from '@src/components/composables/useFormModel';
+import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
+import UpgradeToYearlyButtonForm from '@src/components/DonationForm/Forms/UpgradeToYearlyButtonForm.vue';
+import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
 import {
 	createSubmittableMainDonationForm
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationForm';
 import {
 	createSubmittableUpgradeToYearly
 } from '@src/components/DonationForm/StepControllers/SubmittableUpgradeToYearly';
+import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
+import ChevronLeftIcon from '@src/components/Icons/ChevronLeftIcon.vue';
+import ChevronRightIcon from '@src/components/Icons/ChevronRightIcon.vue';
+import BankTransferLogo from '@src/components/PaymentLogos/BankTransferLogo.vue';
+import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
+import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
+import SepaLogo from '@src/components/PaymentLogos/SepaLogo.vue';
+import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
+import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
+import SetAlreadyDonatedCookieImage from '@src/components/SetWPDECookieImage/SetAlreadyDonatedCookieImage.vue';
+import SetCookieImage from '@src/components/SetWPDECookieImage/SetCookieImage.vue';
+import SetMaybeLaterCookieImage from '@src/components/SetWPDECookieImage/SetMaybeLaterCookieImage.vue';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import SoftClose from '@src/components/SoftClose/SoftClose.vue';
+import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
+import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
 import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
-import SoftClose from '@src/components/SoftClose/SoftClose.vue';
-import SetCookieImage from '@src/components/SetWPDECookieImage/SetCookieImage.vue';
-import FooterAlreadyDonated from '@src/components/Footer/FooterAlreadyDonated.vue';
-import SetAlreadyDonatedCookieImage from '@src/components/SetWPDECookieImage/SetAlreadyDonatedCookieImage.vue';
-import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
-import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
-import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
-import SepaLogo from '@src/components/PaymentLogos/SepaLogo.vue';
-import BankTransferLogo from '@src/components/PaymentLogos/BankTransferLogo.vue';
-import SetMaybeLaterCookieImage from '@src/components/SetWPDECookieImage/SetMaybeLaterCookieImage.vue';
-import WMDEFundsForwardingDE from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingDE.vue';
+import MainBanner from './MainBanner.vue';
+import BannerSlides from '../content/BannerSlides.vue';
+import BannerText from '../content/BannerText.vue';
 
 enum ContentStates {
 	Main = 'wmde-banner-wrapper--main',

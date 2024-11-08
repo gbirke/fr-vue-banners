@@ -1,10 +1,10 @@
-import { expect } from 'vitest';
 import { VueWrapper } from '@vue/test-utils';
+import { expect } from 'vitest';
 import { CloseChoices } from '@src/domain/CloseChoices';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { TimerSpy } from '@test/fixtures/TimerSpy';
 import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { Timer } from '@src/utils/Timer';
+import { TimerSpy } from '@test/fixtures/TimerSpy';
 
 const expectShowsSoftClose = async ( getWrapper: () => VueWrapper<any> ): Promise<any> => {
 	const wrapper = getWrapper();

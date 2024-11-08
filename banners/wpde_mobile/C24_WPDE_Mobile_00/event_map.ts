@@ -1,9 +1,9 @@
-import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { ShownEvent } from '@src/tracking/events/ShownEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
-import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { CustomAmountChangedEvent } from '@src/tracking/events/CustomAmountChangedEvent';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { ShownEvent } from '@src/tracking/events/ShownEvent';
 
 export default new Map( [
 	[ MobileMiniBannerExpandedEvent.EVENT_NAME, 1 ],

@@ -1,12 +1,12 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
-import SubFormStub from '@test/fixtures/SubFormStub.vue';
 import { StepController } from '@src/components/DonationForm/StepController';
 import { PageScroller } from '@src/utils/PageScroller/PageScroller';
 import { StepControllerSpy } from '@test/fixtures/StepControllerSpy';
-import { TrackerSpy } from '@test/fixtures/TrackerSpy';
+import SubFormStub from '@test/fixtures/SubFormStub.vue';
 import { TimerStub } from '@test/fixtures/TimerStub';
+import { TrackerSpy } from '@test/fixtures/TrackerSpy';
 
 const subFormEmitterTemplate = `<template #form-page-1="{ pageIndex, submit, previous }">
 	<button

@@ -41,11 +41,11 @@
 
 <script setup lang="ts">
 
-import InfoIcon from '@src/components/Icons/InfoIcon.vue';
+import { computed, ref } from 'vue';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import { useDisplaySwitch } from '@src/components/composables/useDisplaySwitch';
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { computed, ref } from 'vue';
+import InfoIcon from '@src/components/Icons/InfoIcon.vue';
 
 interface Props {
 	showFireworks: boolean;

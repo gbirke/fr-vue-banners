@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
-import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
-import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
 import { BannerNotShownReasons } from '@src/page/BannerNotShownReasons';
+import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
+import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
 import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
 import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 

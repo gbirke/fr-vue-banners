@@ -1,11 +1,11 @@
 import { computed, ref, watch } from 'vue';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { Intervals, RecurringIntervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
 import { FormModel } from '@src/utils/FormModel/FormModel';
 import { Validity } from '@src/utils/FormModel/Validity';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { Intervals, RecurringIntervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 import { parseFloatFromFormattedString } from '@src/utils/parseFloatFromFormattedString';
-import { AmountValidity } from '@src/utils/FormModel/AmountValidity';
 
 export type TransactionFee = {
 	fixedFee: number;

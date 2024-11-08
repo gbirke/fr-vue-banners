@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest';
+import { Translator } from '@src/Translator';
+import { Ordinal } from '@src/utils/DynamicContent/formatters/Ordinal';
+import { OrdinalDe } from '@src/utils/DynamicContent/formatters/OrdinalDe';
 import { CampaignDaySentence } from '@src/utils/DynamicContent/generators/CampaignDaySentence';
 import TimeRange from '@src/utils/TimeRange';
-import { Translator } from '@src/Translator';
-import { OrdinalDe } from '@src/utils/DynamicContent/formatters/OrdinalDe';
-import { Ordinal } from '@src/utils/DynamicContent/formatters/Ordinal';
 
 const beforeStartDate = new Date( 2023, 10, 10 );
 const startDate = new Date( 2023, 10, 11 );

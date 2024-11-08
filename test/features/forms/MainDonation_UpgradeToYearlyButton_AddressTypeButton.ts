@@ -1,4 +1,8 @@
 import { VueWrapper } from '@vue/test-utils';
+import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
+import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
+import { expectAddressTypeFormSubmits } from '@test/features/forms/subForms/AddressTypeButtonForm';
 import {
 	expectMainDonationFormGoesToPageOnSubmit,
 	submitMainDonationForm
@@ -7,10 +11,6 @@ import {
 	expectUpgradeToYearlyFormGoesToPageOnLinkClick,
 	expectUpgradeToYearlyFormGoesToPageOnSubmit
 } from '@test/features/forms/subForms/UpgradeToYearlyButtonForm';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
-import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { expectAddressTypeFormSubmits } from '@test/features/forms/subForms/AddressTypeButtonForm';
-import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
 
 enum Pages {
 	MainDonation = 1,

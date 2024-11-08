@@ -1,9 +1,9 @@
 // This is a custom npm script that clears the `dist` directory and compiles all banners for a given channel.
 
-const webpack = require( 'webpack' );
 const rimraf = require( 'rimraf' );
-const newProductionConfiguration = require( '../webpack.production' );
+const webpack = require( 'webpack' );
 const CampaignConfig = require( './campaign_config' );
+const newProductionConfiguration = require( '../webpack.production' );
 
 if ( process.argv.length < 3 ) {
 	console.log( 'Please provide a channel name, e.g. "desktop", "mobile", "english", etc' );

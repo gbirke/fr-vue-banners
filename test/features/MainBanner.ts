@@ -1,7 +1,7 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect } from 'vitest';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
 import { CloseChoices } from '@src/domain/CloseChoices';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
 
 const expectEmitsCloseEvent = async ( wrapper: VueWrapper<any> ): Promise<any> => {
 	await wrapper.find( '.wmde-banner-main .wmde-banner-close' ).trigger( 'click' );

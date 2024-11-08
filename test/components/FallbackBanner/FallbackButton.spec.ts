@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
 import { shallowMount } from '@vue/test-utils';
+import { describe, expect, it } from 'vitest';
 import FallbackButton from '@src/components/FallbackBanner/FallbackButton.vue';
 
 describe( 'FallbackButton.vue', () => {

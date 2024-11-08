@@ -1,5 +1,5 @@
-import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
 import { Translator } from '@src/Translator';
+import { TextGenerator } from '@src/utils/DynamicContent/generators/TextGenerator';
 
 export class DonorsNeededSentence implements TextGenerator {
 	private readonly _translator: Translator;

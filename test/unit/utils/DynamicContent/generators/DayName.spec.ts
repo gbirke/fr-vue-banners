@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';
-import { DayName } from '@src/utils/DynamicContent/generators/DayName';
+import { describe, expect, it } from 'vitest';
 import { Translator } from '@src/Translator';
+import { DayName } from '@src/utils/DynamicContent/generators/DayName';
 
 const translator = new Translator( {
 	'day-name-christmas-day': 'day-name-christmas-day',

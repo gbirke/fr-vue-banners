@@ -86,36 +86,36 @@
 </template>
 
 <script setup lang="ts">
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import SoftClose from '@src/components/SoftClose/SoftClose.vue';
 import { computed, inject, ref, watch } from 'vue';
-import FullPageBanner from './FullPageBanner.vue';
-import MiniBanner from './MiniBanner.vue';
-import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
-import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
-import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
-import { PageScroller } from '@src/utils/PageScroller/PageScroller';
+import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import MainDonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
 import MultiStepDonation from '@src/components/DonationForm/MultiStepDonation.vue';
-import BannerText from '../content/BannerText.vue';
-import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
-import BannerSlides from '../content/BannerSlides.vue';
-import BannerFooter from '@src/components/Footer/BannerFooter.vue';
-import KeenSlider from '@src/components/Slider/KeenSlider.vue';
-import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
-import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
-import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
-import { Tracker } from '@src/tracking/Tracker';
-import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
 import {
 	createSubmittableMainDonationFormSinglePage
 } from '@src/components/DonationForm/StepControllers/SubmittableMainDonationFormSinglePage';
-import { CloseChoices } from '@src/domain/CloseChoices';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import BannerFooter from '@src/components/Footer/BannerFooter.vue';
 import SmsIcon from '@src/components/Icons/SmsIcon.vue';
-import { useFormModel } from '@src/components/composables/useFormModel';
+import MastercardLogo from '@src/components/PaymentLogos/MastercardLogo.vue';
+import PayPalLogo from '@src/components/PaymentLogos/PayPalLogo.vue';
+import VisaLogo from '@src/components/PaymentLogos/VisaLogo.vue';
+import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
+import KeenSlider from '@src/components/Slider/KeenSlider.vue';
+import SoftClose from '@src/components/SoftClose/SoftClose.vue';
+import FundsModal from '@src/components/UseOfFunds/FundsModal.vue';
 import WMDEFundsForwardingEN from '@src/components/UseOfFunds/Infographics/WMDEFundsForwardingEN.vue';
+import { UseOfFundsCloseSources } from '@src/components/UseOfFunds/UseOfFundsCloseSources';
+import { CloseChoices } from '@src/domain/CloseChoices';
+import { UseOfFundsContent as useOfFundsContentInterface } from '@src/domain/UseOfFunds/UseOfFundsContent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { Tracker } from '@src/tracking/Tracker';
+import { TrackingFeatureName } from '@src/tracking/TrackingEvent';
+import { PageScroller } from '@src/utils/PageScroller/PageScroller';
+import FullPageBanner from './FullPageBanner.vue';
+import MiniBanner from './MiniBanner.vue';
+import BannerSlides from '../content/BannerSlides.vue';
+import BannerText from '../content/BannerText.vue';
 const formModel = useFormModel();
 
 enum ContentStates {

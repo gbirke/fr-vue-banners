@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
 import FallbackBank from '@src/components/FallbackBanner/FallbackBank.vue';
+import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
 
 interface Props {
 	currentSlide: number

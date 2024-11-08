@@ -1,16 +1,16 @@
-import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
-import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
-import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
-import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
-import { mapFormStepShownEvent } from '@src/tracking/LegacyEventTracking/mapFormStepShownEvent';
-import { CloseEvent } from '@src/tracking/events/CloseEvent';
-import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
-import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
-import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
 import { BannerSubmitEvent } from '@src/tracking/events/BannerSubmitEvent';
-import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
-import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
 import { BannerSubmitOnReturnEvent } from '@src/tracking/events/BannerSubmitOnReturnEvent';
+import { CloseEvent } from '@src/tracking/events/CloseEvent';
+import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
+import { MobileMiniBannerExpandedEvent } from '@src/tracking/events/MobileMiniBannerExpandedEvent';
+import { NotShownEvent } from '@src/tracking/events/NotShownEvent';
+import { createViewportInfo } from '@src/tracking/LegacyEventTracking/createViewportInfo';
+import { mapCloseEvent } from '@src/tracking/LegacyEventTracking/mapCloseEvent';
+import { mapFormStepShownEvent } from '@src/tracking/LegacyEventTracking/mapFormStepShownEvent';
+import { mapNotShownEvent } from '@src/tracking/LegacyEventTracking/mapNotShownEvent';
+import { TrackingEventConverterFactory } from '@src/tracking/LegacyTrackerWPORG';
+import { WMDESizeIssueEvent } from '@src/tracking/WPORG/WMDEBannerSizeIssue';
+import { WMDELegacyBannerEvent } from '@src/tracking/WPORG/WMDELegacyBannerEvent';
 
 export default new Map<string, TrackingEventConverterFactory>( [
 	[ CloseEvent.EVENT_NAME, mapCloseEvent ],

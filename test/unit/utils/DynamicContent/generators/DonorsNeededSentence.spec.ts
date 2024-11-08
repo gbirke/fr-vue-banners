@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { DonorsNeededSentence } from '@src/utils/DynamicContent/generators/DonorsNeededSentence';
 import { Translator } from '@src/Translator';
+import { DonorsNeededSentence } from '@src/utils/DynamicContent/generators/DonorsNeededSentence';
 
 describe( 'DonorsNeededSentence', () => {
 	it( 'returns empty string if donors needed is zero', function () {

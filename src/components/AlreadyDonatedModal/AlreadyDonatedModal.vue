@@ -25,10 +25,10 @@
 
 <script setup lang="ts">
 
-import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import { inject, ref, watch } from 'vue';
-import { Tracker } from '@src/tracking/Tracker';
+import ButtonClose from '@src/components/ButtonClose/ButtonClose.vue';
 import { AlreadyDonatedShownEvent } from '@src/tracking/events/AlreadyDonatedShownEvent';
+import { Tracker } from '@src/tracking/Tracker';
 
 interface Props {
 	isVisible: boolean;

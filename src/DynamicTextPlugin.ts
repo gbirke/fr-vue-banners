@@ -1,9 +1,9 @@
 import { App } from 'vue';
-import { Translator } from '@src/Translator';
-import { Formatters } from '@src/utils/DynamicContent/Formatters';
 import { CampaignParameters } from '@src/domain/CampaignParameters';
-import { ImpressionCount } from '@src/utils/ImpressionCount';
+import { Translator } from '@src/Translator';
 import DynamicCampaignText from '@src/utils/DynamicContent/DynamicCampaignText';
+import { Formatters } from '@src/utils/DynamicContent/Formatters';
+import { ImpressionCount } from '@src/utils/ImpressionCount';
 
 interface DynamicCampaignTextOptions {
     date: Date;

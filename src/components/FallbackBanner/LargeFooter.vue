@@ -12,9 +12,9 @@
 
 <script setup lang="ts">
 
-import UseOfFundsLink from '@src/components/FallbackBanner/UseOfFundsLink.vue';
 import FallbackBank from '@src/components/FallbackBanner/FallbackBank.vue';
 import FallbackButton from '@src/components/FallbackBanner/FallbackButton.vue';
+import UseOfFundsLink from '@src/components/FallbackBanner/UseOfFundsLink.vue';
 
 defineEmits( [ 'use-of-funds-button-clicked', 'submit-button-clicked' ] );
 

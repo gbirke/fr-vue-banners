@@ -40,12 +40,12 @@
 </template>
 
 <script setup lang="ts">
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { inject, onMounted, watch } from 'vue';
-import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
-import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
 import AnimatedText from '@src/components/AnimatedText/AnimatedText.vue';
 import { useLiveDateAndTime } from '@src/components/composables/useLiveDateAndTime';
+import ProgressBar from '@src/components/ProgressBar/ProgressBar.vue';
+import KeenSliderSlide from '@src/components/Slider/KeenSliderSlide.vue';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 
 interface Props {
 	playLiveText: boolean;

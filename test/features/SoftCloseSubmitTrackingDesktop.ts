@@ -1,12 +1,12 @@
 import { VueWrapper } from '@vue/test-utils';
 import { expect, vi } from 'vitest';
 import { CloseChoices } from '@src/domain/CloseChoices';
-import { LocalCloseTracker } from '@src/utils/LocalCloseTracker';
-import { submitMainDonationForm } from '@test/features/forms/subForms/MainDonationForm';
+import { BannerSubmitOnReturnEvent } from '@src/tracking/events/BannerSubmitOnReturnEvent';
+import { Tracker } from '@src/tracking/Tracker';
 import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
-import { Tracker } from '@src/tracking/Tracker';
-import { BannerSubmitOnReturnEvent } from '@src/tracking/events/BannerSubmitOnReturnEvent';
+import { LocalCloseTracker } from '@src/utils/LocalCloseTracker';
+import { submitMainDonationForm } from '@test/features/forms/subForms/MainDonationForm';
 
 const expectStoresCloseChoiceInBannerWithoutSoftClose = async ( wrapper: VueWrapper<any> ): Promise<any> => {
 	const localCloseTracker: LocalCloseTracker = {

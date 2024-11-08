@@ -1,10 +1,10 @@
 import { describe, expect, it, test } from 'vitest';
+import { DailyDonorStatsValues } from '@src/utils/DynamicContent/DailyDonorAverage';
+import { IntegerEn } from '@src/utils/DynamicContent/formatters/IntegerEn';
 import {
 	HourlyConfigurableDailyDonorAverage,
 	HourlyDonorPercentages
 } from '@src/utils/DynamicContent/HourlyConfigurableDailyDonorAverage';
-import { DailyDonorStatsValues } from '@src/utils/DynamicContent/DailyDonorAverage';
-import { IntegerEn } from '@src/utils/DynamicContent/formatters/IntegerEn';
 
 const averageDailyDonors = 4760;
 const hourlyDonorPercentages: HourlyDonorPercentages = [ 1, 1, 1, 1, 1, 1, 5, 5, 5, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 ];

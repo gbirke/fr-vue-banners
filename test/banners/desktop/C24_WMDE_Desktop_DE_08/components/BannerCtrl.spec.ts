@@ -1,12 +1,16 @@
-import { beforeEach, describe, test, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, test, vi } from 'vitest';
 import Banner from '@banners/desktop/C24_WMDE_Desktop_DE_08/components/BannerCtrl.vue';
 import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
-import { newDynamicContent } from '@test/banners/dynamicCampaignContent';
-import { useOfFundsContent } from '@test/banners/useOfFundsContent';
-import { formItems } from '@test/banners/formItems';
+import { useFormModel } from '@src/components/composables/useFormModel';
+import { Tracker } from '@src/tracking/Tracker';
+import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
 import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
-import { useOfFundsFeatures } from '@test/features/UseOfFunds';
+import { Timer } from '@src/utils/Timer';
+import { newDynamicContent } from '@test/banners/dynamicCampaignContent';
+import { formItems } from '@test/banners/formItems';
+import { useOfFundsContent } from '@test/banners/useOfFundsContent';
+import { alreadyDonatedModalFeatures } from '@test/features/AlreadyDonatedModal';
 import {
 	bannerContentAnimatedTextFeatures,
 	bannerContentAverageDonationFeatures,
@@ -14,18 +18,14 @@ import {
 	bannerContentDisplaySwitchFeatures,
 	bannerContentFeatures
 } from '@test/features/BannerContent';
-import { donationFormFeatures } from '@test/features/forms/MainDonation_UpgradeToYearlyButton';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { resetFormModel } from '@test/resetFormModel';
-import { DynamicContent } from '@src/utils/DynamicContent/DynamicContent';
-import { bannerMainFeatures } from '@test/features/MainBanner';
 import { formActionSwitchFeatures } from '@test/features/form_action_switch/MainDonation_UpgradeToYearlyButton';
+import { donationFormFeatures } from '@test/features/forms/MainDonation_UpgradeToYearlyButton';
+import { bannerMainFeatures } from '@test/features/MainBanner';
 import { softCloseFeatures } from '@test/features/SoftCloseDesktop';
-import { alreadyDonatedModalFeatures } from '@test/features/AlreadyDonatedModal';
 import { softCloseSubmitTrackingFeaturesDesktop } from '@test/features/SoftCloseSubmitTrackingDesktop';
-import { Tracker } from '@src/tracking/Tracker';
-import { Timer } from '@src/utils/Timer';
+import { useOfFundsFeatures } from '@test/features/UseOfFunds';
 import { TimerStub } from '@test/fixtures/TimerStub';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formModel = useFormModel();
 const translator = ( key: string ): string => key;

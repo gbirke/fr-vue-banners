@@ -1,15 +1,15 @@
-import { describe, expect, it, vi, beforeEach } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { useFormModel } from '@src/components/composables/useFormModel';
 import DonationForm from '@src/components/DonationForm/Forms/MainDonationForm.vue';
+import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import { DonationFormItems } from '@src/utils/FormItemsBuilder/DonationFormItems';
-import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { AddressTypes } from '@src/utils/FormItemsBuilder/fields/AddressTypes';
+import { Intervals } from '@src/utils/FormItemsBuilder/fields/Intervals';
 import { PaymentMethods } from '@src/utils/FormItemsBuilder/fields/PaymentMethods';
 import { newDonationFormValidator } from '@src/validation/DonationFormValidator';
-import { useFormModel } from '@src/components/composables/useFormModel';
-import { resetFormModel } from '@test/resetFormModel';
-import { CurrencyEn } from '@src/utils/DynamicContent/formatters/CurrencyEn';
 import { TrackerSpy } from '@test/fixtures/TrackerSpy';
+import { resetFormModel } from '@test/resetFormModel';
 
 const formItems: DonationFormItems = {
 	addressType: [ AddressTypes.ANONYMOUS, AddressTypes.EMAIL ],
