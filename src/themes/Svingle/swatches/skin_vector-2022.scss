@@ -1,5 +1,9 @@
-@use 'color_dark';
-@use 'color_light';
+@use 'blue/color_dark' as dark-blue;
+@use 'blue/color_light' as light-blue;
+@use 'green/color_dark' as dark-green;
+@use 'green/color_light' as light-green;
+
+$swatch: 'blue' !default;
 
 $slider: false !default;
 $progress-bar: false !default;
@@ -13,8 +17,8 @@ $soft-close: false !default;
 $fallback-banner: false !default;
 $minimised-banner: false !default;
 
-.skin-theme-clientpref-day .wmde-banner {
-	@include color_light.swatch(
+%light-blue {
+	@include light-blue.swatch(
 		$slider,
 		$progress-bar,
 		$double-progress-bar,
@@ -29,8 +33,8 @@ $minimised-banner: false !default;
 	);
 }
 
-.skin-theme-clientpref-night .wmde-banner {
-	@include color_dark.swatch(
+%light-green {
+	@include light-green.swatch(
 		$slider,
 		$progress-bar,
 		$double-progress-bar,
@@ -43,38 +47,54 @@ $minimised-banner: false !default;
 		$fallback-banner,
 		$minimised-banner
 	);
+}
+
+%dark-blue {
+	@include dark-blue.swatch(
+		$slider,
+		$progress-bar,
+		$double-progress-bar,
+		$select-group,
+		$select-group-bubble,
+		$select-group-button,
+		$upgrade-to-yearly,
+		$already-donated,
+		$soft-close,
+		$fallback-banner,
+		$minimised-banner
+	);
+}
+
+%dark-green {
+	@include dark-green.swatch(
+		$slider,
+		$progress-bar,
+		$double-progress-bar,
+		$select-group,
+		$select-group-bubble,
+		$select-group-button,
+		$upgrade-to-yearly,
+		$already-donated,
+		$soft-close,
+		$fallback-banner,
+		$minimised-banner
+	);
+}
+
+.skin-theme-clientpref-day .wmde-banner {
+	@extend %light-#{$swatch};
+}
+
+.skin-theme-clientpref-night .wmde-banner {
+	@extend %dark-#{$swatch};
 }
 
 .skin-theme-clientpref-os .wmde-banner {
 	@media ( prefers-color-scheme: dark ) {
-		@include color_dark.swatch(
-			$slider,
-			$progress-bar,
-			$double-progress-bar,
-			$select-group,
-			$select-group-bubble,
-			$select-group-button,
-			$upgrade-to-yearly,
-			$already-donated,
-			$soft-close,
-			$fallback-banner,
-			$minimised-banner
-		);
+		@extend %dark-#{$swatch};
 	}
 
 	@media ( prefers-color-scheme: light ) {
-		@include color_light.swatch(
-			$slider,
-			$progress-bar,
-			$double-progress-bar,
-			$select-group,
-			$select-group-bubble,
-			$select-group-button,
-			$upgrade-to-yearly,
-			$already-donated,
-			$soft-close,
-			$fallback-banner,
-			$minimised-banner
-		);
+		@extend %light-#{$swatch};
 	}
 }

@@ -1,0 +1,195 @@
+$white: #ffffff;
+$black: #000000;
+
+$grey100: #f8f9fa;
+$grey150: #dddddd;
+$grey200: #bbbbbb;
+$grey300: #b7b7b7;
+$grey500: #808080;
+$grey550: #72777d;
+$grey600: #747474;
+$grey700: #202122;
+
+$red100: #ffe8e8;
+$red500: #fb4848;
+$red600: #990a00;
+$red700: #7d0a00;
+
+$blue100: #dff1ff;
+$blue600: #4465a7;
+$blue650: #3366cc;
+$blue700: #2a4b8d;
+
+$green600: #1a8559;
+
+@mixin swatch(
+	$slider: false,
+	$progress-bar: false,
+	$double-progress-bar: false,
+	$select-group: false,
+	$select-group-bubble: false,
+	$select-group-button: false,
+	$upgrade-to-yearly: false,
+	$already-donated: false,
+	$soft-close: false,
+	$fallback-banner: false,
+	$minimised-banner: false,
+) {
+	--main-background: #{$white};
+	--main-color: #{$grey700};
+	--main-title-line-background: #{$red600};
+	--main-border-bottom: #{$grey200};
+	--main-box-shadow: 0 3px 0.6em rgba( 60 60 60 / 40% );
+
+	--message-background: #{$green600};
+	--message-color: #{$white};
+	--message-border: #{$red600};
+
+	--color-error: #{$red600};
+	--button-close-fill: #{$grey600};
+	--button-background: #{$red600};
+	--button-color: #{$white};
+	--previous-button-fill: #{$grey700};
+
+	--footer-color: #{$black};
+	--footer-smallprint-color: #{$grey550};
+	--input-selection-color: #{$black};
+	--input-selection-selected-background: #{$red600};
+	--input-selection-selected-color: #{$white};
+	--input-checkbox-border: #{$grey200};
+	--input-checkbox-background-checked: #{$red600};
+	--input-checkbox-border-checked: #{$red600};
+
+	--animated-highlight-color: #{$white};
+	/* stylelint-disable */
+	--animated-highlight-gradient: linear-gradient(
+		270deg,
+		rgba( 255, 255, 255, 0 ) 0%,
+		rgba( 255, 255, 255, 0 ) 50%,
+		rgba(  153, 10, 0 ) 50%,
+		rgba(  153, 10, 0 ) 100%
+	);
+	/* stylelint-enable */
+
+	@if $slider {
+		--slider-background: #{$green600};
+		--slider-color: #{$white};
+
+		--slider-pagination-background: #{$white};
+		--slider-pagination-border: #{$blue700};
+		--slider-pagination-background-active: #{$blue700};
+		--slider-pagination-border-active: #{$white};
+		--slider-chevron: #{$white};
+	}
+
+	@if $progress-bar {
+		--progress-bar-wrapper-border: #{$red600};
+		--progress-bar-wrapper-background: #{$white};
+		--progress-bar-fill-background: #{$red600};
+		--progress-bar-fill-color: #{$white};
+	}
+
+	@if $double-progress-bar {
+		--double-progress-color: #{$white};
+		--double-progress-time-background: #{$red100};
+		--double-progress-time-fill-background: #{$red600};
+		--double-progress-difference-background: #{$red500};
+
+		--double-progress-amount-background: #{$blue100};
+		--double-progress-amount-fill-background: #{$blue700};
+		--double-progress-right-text-color: #{$grey700};
+	}
+
+	@if $select-group {
+		--select-group-background: #{$white};
+		--select-group-radio-label-color: #{$black};
+		--select-group-radio-label-background: #{$grey200};
+		--select-group-radio-label-border: #{$grey200};
+
+		--select-group-radio-background: #{$white};
+		--select-group-radio-border: #{$grey200};
+		--select-group-radio-checkmark: #{$white};
+		--select-group-radio-background-checked: #{$red600};
+		--select-group-radio-border-checked: #{$red600};
+
+		--select-custom-amount-border: #{$grey150};
+		--select-custom-amount-color: #{$grey700};
+		--select-custom-amount-border-checked: #{$blue700};
+	}
+
+	@if $select-group-bubble {
+		--select-group-bubble-color: #{$black};
+		--select-group-bubble-background: transparent;
+		--select-group-bubble-background-active: #{$white};
+		--select-group-bubble-border: #{$grey300};
+		--select-group-bubble-border-active: #{$blue700};
+
+		--select-group-bubble-radio-background: #{$white};
+		--select-group-bubble-radio-border: #{$grey500};
+		--select-group-bubble-radio-checkmark: #{$blue700};
+		--select-group-bubble-radio-background-checked: #{$white};
+		--select-group-bubble-radio-border-checked: #{$blue700};
+	}
+
+	@if $select-group-button {
+		--select-group-button-border: #{$grey300};
+		--select-group-button-background: #{$grey100};
+		--select-group-button-background-focused: #{$grey150};
+		--select-group-button-border-checked: #{$grey600};
+		--select-group-button-background-checked: #{$blue700};
+		--select-group-button-color-checked: #{$white};
+	}
+
+	@if $upgrade-to-yearly {
+		--upgrade-to-yearly-link-color: #{$blue700};
+		--upgrade-to-yearly-back-color: #{$blue700};
+	}
+
+	@if $already-donated {
+		--already-donated-button-background: #{$red600};
+		--already-donated-button-color: #{$white};
+	}
+
+	@if $soft-close {
+		--soft-close-background: #{$white};
+		--soft-close-button-background: #{$red600};
+		--soft-close-button-color: #{$white};
+		--soft-close-bar-background: #{$red600};
+	}
+
+	@if $fallback-banner {
+		--fallback-background: #{$white};
+		--fallback-border: #{$red600};
+		--fallback-button-background: #{$blue700};
+		--fallback-button-color: #{$white};
+		--fallback-button-background-hover: #{$blue600};
+		--fallback-message-background: #{$white};
+		--fallback-message-color: #{$grey700};
+		--fallback-message-border: #{$red600};
+		--fallback-uof-link: #{$grey500};
+
+		--fallback-progressbar-background: #{$white};
+		--fallback-progressbar-fill: #{$red600};
+		--fallback-progressbar-color: #{$white};
+
+		--fallback-slider-container-background: #{$white};
+		--fallback-slider-container-color: #{$black};
+		--fallback-slider-pagination-background: #{$grey600};
+		--fallback-slider-pagination-isactive-background: #{$white};
+		--fallback-slider-pagination-border: #{$white};
+		--fallback-slider-pagination-isactive-border: #{$red600};
+	}
+
+	@if $minimised-banner {
+		--minimised-color: #{$white};
+		--minimised-background: #{$blue700};
+		--minimised-button-background: #{$red600};
+		--minimised-button-color: #{$white};
+		--minimised-button-background-hover: #{$red700};
+		--minimised-buttongroup-border: #{$blue700};
+		--button-close-fill: #{$blue700};
+		--minimised-control-color: #{$blue700};
+		--minimised-control-border: #{$grey300};
+		--minimised-control-fill: #{$blue700};
+	}
+}

@@ -1,4 +1,8 @@
-@use 'color_light';
+@use 'blue/color_light' as blue;
+@use 'green/color_light' as green;
+@use 'sass:map';
+
+$swatch: 'blue' !default;
 
 $slider: false !default;
 $progress-bar: false !default;
@@ -12,8 +16,8 @@ $soft-close: false !default;
 $fallback-banner: false !default;
 $minimised-banner: false !default;
 
-.wmde-banner {
-	@include color_light.swatch(
+%blue {
+	@include blue.swatch(
 		$slider,
 		$progress-bar,
 		$double-progress-bar,
@@ -26,4 +30,24 @@ $minimised-banner: false !default;
 		$fallback-banner,
 		$minimised-banner
 	);
+}
+
+%green {
+	@include green.swatch(
+		$slider,
+		$progress-bar,
+		$double-progress-bar,
+		$select-group,
+		$select-group-bubble,
+		$select-group-button,
+		$upgrade-to-yearly,
+		$already-donated,
+		$soft-close,
+		$fallback-banner,
+		$minimised-banner
+	);
+}
+
+.wmde-banner {
+	@extend %#{$swatch};
 }

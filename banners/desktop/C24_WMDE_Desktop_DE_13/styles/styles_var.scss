@@ -1,5 +1,6 @@
 // This is the file where we import the theme-specific component styles
 @use '../../../../src/themes/Svingle/swatches/skin_default' with (
+	$swatch: 'green',
 	$slider: true,
 	$select-group: true,
 	$upgrade-to-yearly: true,
