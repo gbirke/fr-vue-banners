@@ -1,0 +1,72 @@
+#TODO ask PM about title (path) and ID
+#TODO Ask PM about $ref
+title: TBD
+description: Logs banner events for WMDE fundraising campaigns
+$id: TBD
+$schema: 'https://json-schema.org/draft-07/schema#'
+type: object
+
+properties:
+  event:
+    type: object
+    required:
+      - eventName
+      - trackingKeyword
+    properties:
+      trackingKeyword:
+        description: tracking keyword for the banner this (eventName) event came from
+        type: string
+      eventName:
+        description: the name of the event
+        type: string
+      feature:
+        description: >
+          Which part of the banner the event comes from.
+          Can be a Component name or a general feature description like "SoftClose".
+          Can be empty, if exact source is not needed (defined by Campaigns Team)
+        type: string
+      userChoice:
+        description: >
+          For tracking the same event where the user has a choice between several options or specific actions.
+          ONLY use this for tracking predefined user interactions.
+          Examples: 'increase' or 'decrease' (custom amount), 'recurring' or 'non-recurring' ("upgrade to yearly" form)
+        type: string
+      customData:
+        description: >
+          Event-specific structured data
+          Example: Viewport data (banner height, screen width and height) for size issues
+        type: object
+        additionalProperties: {type: "string"}
+
+examples:
+  - event:
+      trackingKeyword: org-25-231227-ctrl
+      eventName: not-shown
+      feature: Page
+      customData:
+        bannerHeight: 200px
+
+    meta:
+      dt: '2020-04-02T19:11:20.942Z'
+      id: b0caf18d-6c7f-4403-947d-2712bbe28610
+      stream: eventlogging_WMDEBannerEvents
+    dt: '2020-04-02T19:11:20.942Z'
+    client_dt: '2020-04-02T19:11:20.942Z'
+    $schema:
+      $ref: '#/$id'
+    # schema: WMDEBannerEvents
+  - event:
+      trackingKeyword: org-mob11_2-231201-var
+      eventName: upgrade-to-yearly
+      feature: UpgradeToYearly
+      userChoice: recurring
+
+    meta:
+      dt: '2020-04-02T19:11:20.942Z'
+      id: b0caf18d-6c7f-4403-947d-2712bbe28610
+      stream: eventlogging_WMDEBannerEvents
+    dt: '2020-04-02T19:11:20.942Z'
+    client_dt: '2020-04-02T19:11:20.942Z'
+    $schema:
+      $ref: '#/$id'
+    # schema: WMDEBannerEvents
