@@ -10,6 +10,11 @@
 {{{ bannerValues }}}
 {{{ useOfFundsTransclude }}}
 <nowiki>
-	<script>mw.loader.using(['vue'], function(){ {{{ banner }}} })</script>
+	<script>setTimeout(function(){
+        mw.loader.using(['vue'], function(){ {{{ banner }}} });
+        },
+        7500
+        );
+     </script>
 </nowiki>
 
