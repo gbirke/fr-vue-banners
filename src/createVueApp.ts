@@ -4,7 +4,6 @@ import type { Component, App } from 'vue';
 
 // Declare external "Vue" object, which might or might not exist
 // In Production it's a global variable, in the dev environment it's undefined
-// eslint-disable-next-line no-var
 declare var Vue: unknown;
 
 type Data = Record<string, unknown>;
