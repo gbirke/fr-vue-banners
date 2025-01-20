@@ -26,7 +26,8 @@ for await ( const entry of stream ) {
 
 	// Check each line of the file for mismatched imports
 	const lineReader = readline.createInterface( {
-		input: fs.createReadStream( entry )
+		// eslint-disable-next-line security/detect-non-literal-fs-filename
+		input: fs.createReadStream( entry ),
 	} );
 	let lineNumber = 1;
 	for await ( const line of lineReader ) {

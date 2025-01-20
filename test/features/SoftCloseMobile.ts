@@ -56,14 +56,14 @@ const expectEmitsSoftCloseAlreadyDonatedEvent = async ( getWrapper: () => VueWra
 };
 
 const expectEmitsSoftCloseTimeOutEvent = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( null, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( null, timerSpy );
 
 	await wrapper.find( '.wmde-banner-mini-close-button' ).trigger( 'click' );
 
 	// The soft close counts down over 15 seconds so we need to keep advancing until it runs out
 	for ( let i: number = 0; i < 15; i++ ) {
-		await timer.advanceInterval();
+		await timerSpy.advanceInterval();
 	}
 
 	expect( wrapper.emitted( 'bannerClosed' ).length ).toBe( 1 );

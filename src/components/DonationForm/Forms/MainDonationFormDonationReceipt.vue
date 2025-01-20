@@ -86,6 +86,7 @@ export default {
 	name: 'MainDonationFormDonationReceipt'
 };
 </script>
+
 <script setup lang="ts">
 
 import { computed, inject, onMounted, ref, watch } from 'vue';

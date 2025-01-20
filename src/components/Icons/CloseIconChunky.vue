@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-withDefaults( defineProps<{fill?: string}>(), {
+withDefaults( defineProps<{ fill?: string }>(), {
 	fill: '#DBB0AD'
 } );
 </script>

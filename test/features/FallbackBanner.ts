@@ -77,9 +77,9 @@ const hidesUseOfFundsFromLargeBanner = async ( getWrapperAtWidth: ( width: numbe
 };
 
 const showsTheAnimatedHighlightInLargeBanner = async ( getWrapperAtWidth: ( width: number, dynamicContent: DynamicContent ) => VueWrapper<any> ): Promise<any> => {
-	const dynamicContent = newDynamicContent();
-	dynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
-	const wrapper = getWrapperAtWidth( 800, dynamicContent );
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
+	const wrapper = getWrapperAtWidth( 800, localDynamicContent );
 
 	expect( wrapper.find( '.wmde-banner-message .wmde-banner-text-animated-highlight' ).exists() ).toBeTruthy();
 };
@@ -90,23 +90,23 @@ const showsLiveTimeInLargeBanner = async ( getWrapperAtWidth: (
 	tracker: Tracker,
 	timer: Timer
 ) => VueWrapper<any> ): Promise<any> => {
-	const dynamicContent = newDynamicContent();
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapperAtWidth( 800, dynamicContent, null, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapperAtWidth( 800, localDynamicContent, null, timerSpy );
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Time' );
@@ -115,24 +115,24 @@ const showsLiveTimeInLargeBanner = async ( getWrapperAtWidth: (
 const submitsFromLargeBanner = async ( getWrapperAtWidth: ( width: number, dynamicContent: DynamicContent, tracker: Tracker ) => VueWrapper<any> ): Promise<any> => {
 	const location = { href: '' };
 	Object.defineProperty( window, 'location', { writable: true, configurable: true, value: location } );
-	const tracker = new TrackerSpy();
-	const wrapper = getWrapperAtWidth( 800, null, tracker );
+	const trackerSpy = new TrackerSpy();
+	const wrapper = getWrapperAtWidth( 800, null, trackerSpy );
 
 	await wrapper.find( '.wmde-banner-fallback-large .wmde-banner-fallback-button' ).trigger( 'click' );
 
-	expect( tracker.hasTrackedEvent( FallbackBannerSubmitEvent.EVENT_NAME ) );
+	expect( trackerSpy.hasTrackedEvent( FallbackBannerSubmitEvent.EVENT_NAME ) );
 	expect( location.href ).toStrictEqual( 'https://spenden.wikimedia.de' );
 };
 
 const submitsFromSmallBanner = async ( getWrapperAtWidth: ( width: number, dynamicContent: DynamicContent, tracker: Tracker ) => VueWrapper<any> ): Promise<any> => {
 	const location = { href: '' };
 	Object.defineProperty( window, 'location', { writable: true, configurable: true, value: location } );
-	const tracker = new TrackerSpy();
-	const wrapper = getWrapperAtWidth( 799, null, tracker );
+	const trackerSpy = new TrackerSpy();
+	const wrapper = getWrapperAtWidth( 799, null, trackerSpy );
 
 	await wrapper.find( '.wmde-banner-fallback-small .wmde-banner-fallback-button' ).trigger( 'click' );
 
-	expect( tracker.hasTrackedEvent( FallbackBannerSubmitEvent.EVENT_NAME ) );
+	expect( trackerSpy.hasTrackedEvent( FallbackBannerSubmitEvent.EVENT_NAME ) );
 	expect( location.href ).toStrictEqual( 'https://spenden.wikimedia.de' );
 };
 

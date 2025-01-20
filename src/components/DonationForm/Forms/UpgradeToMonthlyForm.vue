@@ -12,7 +12,7 @@
 			<div :class="[
 				'wmde-banner-select-group-container',
 				{ 'wmde-banner-select-group-container--with-error': intervalValidity === Validity.Invalid }
-            ]">
+			]">
 				<div class="wmde-banner-select-group">
 					<div
 						class="wmde-banner-select-group-option wmde-banner-select-group-option-no"
@@ -29,8 +29,8 @@
 								@change="onChange"
 							/>
 							<span class="wmde-banner-select-group-label">
-                                {{ $translate( 'upgrade-to-monthly-no', { amount: secondPageAmount } ) }}
-                            </span>
+								{{ $translate( 'upgrade-to-monthly-no', { amount: secondPageAmount } ) }}
+							</span>
 						</label>
 					</div>
 					<div
@@ -48,8 +48,8 @@
 								@change="onChange"
 							/>
 							<span class="wmde-banner-select-group-label">
-                                {{ $translate( 'upgrade-to-monthly-yes', { amount: secondPageAmountMonthlyFraction } ) }}
-                            </span>
+								{{ $translate( 'upgrade-to-monthly-yes', { amount: secondPageAmountMonthlyFraction } ) }}
+							</span>
 						</label>
 					</div>
 				</div>
@@ -67,10 +67,10 @@
 		</a>
 
 		<span v-if="intervalValidity === Validity.Invalid" class="wmde-banner-select-group-error-message">
-            <span class="wmde-banner-error-icon">
-                {{ $translate( 'upgrade-to-monthly-error' ) }}
-            </span>
-        </span>
+			<span class="wmde-banner-error-icon">
+				{{ $translate( 'upgrade-to-monthly-error' ) }}
+			</span>
+		</span>
 
 		<div class="wmde-banner-form-button-container upgrade-to-yearly-button">
 			<button tabIndex="-1" class="wmde-banner-form-button t-submit-upgrade-to-yearly" type="submit">
@@ -87,6 +87,7 @@ export default {
 	name: 'UpgradeToMonthlyForm'
 };
 </script>
+
 <script setup lang="ts">
 
 import { inject, ref, watch } from 'vue';

@@ -3,7 +3,7 @@
 
 		<div class="wmde-banner-form-new-custom-amount-title">
 			<a tabIndex="-1" href="#" class="previous"
-					@click.prevent="onPrevious">
+				@click.prevent="onPrevious">
 				<FormPreviousIcon/>
 			</a>
 		</div>
@@ -73,6 +73,7 @@ import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFor
 import FormPreviousIcon from '@src/components/Icons/FormPreviousIcon.vue';
 
 interface Props {
+	// eslint-disable-next-line vue/no-unused-properties
 	isCurrent: boolean
 }
 const props = defineProps<Props>();

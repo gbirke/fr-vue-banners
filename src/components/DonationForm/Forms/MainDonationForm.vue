@@ -73,6 +73,7 @@ export default {
 	name: 'MainDonationForm'
 };
 </script>
+
 <script setup lang="ts">
 
 import { inject, ref } from 'vue';

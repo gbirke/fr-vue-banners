@@ -28,7 +28,7 @@
 
 		<p>
 			Daher unsere Bitte: <span class="highlight">Werden Sie Fördermitglied und helfen Sie uns,
-			die kommenden technologischen Herausforderungen zu meistern.</span> Damit die Freiwilligen stets unter
+				die kommenden technologischen Herausforderungen zu meistern.</span> Damit die Freiwilligen stets unter
 			besten Bedingungen arbeiten können – und Sie sich auch in Zukunft auf Wikipedia als Ort des freien Zugangs
 			zu Wissen und Bildung verlassen können.
 		</p>
@@ -39,6 +39,7 @@
 	</div>
 
 </template>
+
 <script setup lang="ts">
 import ExecutiveDirectorsImage from '@banners/thank_you_2024/content/ExecutiveDirectorsImage.vue';
 import StatsBox from '@banners/thank_you_2024/components/StatsBox.vue';

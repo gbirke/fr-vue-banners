@@ -1,24 +1,24 @@
 <template>
-    <div class="wmde-banner-wrapper" :class="contentState">
-        <MainBanner
+	<div class="wmde-banner-wrapper" :class="contentState">
+		<MainBanner
 			@close="onCloseMain"
 			@form-interaction="$emit( 'bannerContentChanged' )"
-            :banner-state="bannerState"
-            v-if="contentState === ContentStates.Main"
-        >
-            <template #banner-text>
-                <BannerText/>
-            </template>
+			:banner-state="bannerState"
+			v-if="contentState === ContentStates.Main"
+		>
+			<template #banner-text>
+				<BannerText/>
+			</template>
 
-            <template #banner-slides="{ play }: any">
-                <KeenSlider :with-navigation="true" :play="play" :interval="10000" :delay="2000">
+			<template #banner-slides="{ play }: any">
+				<KeenSlider :with-navigation="true" :play="play" :interval="10000" :delay="2000">
 
-                    <template #slides="{ currentSlide }: any">
-                        <BannerSlides :currentSlide="currentSlide"/>
-                    </template>
+					<template #slides="{ currentSlide }: any">
+						<BannerSlides :currentSlide="currentSlide"/>
+					</template>
 
-                </KeenSlider>
-            </template>
+				</KeenSlider>
+			</template>
 
 			<template #progress>
 				<DoubleProgressBar />
@@ -52,15 +52,15 @@
 						/>
 					</template>
 
-                </MultiStepDonation>
-            </template>
+				</MultiStepDonation>
+			</template>
 			<template #footer>
 				<FooterAlreadyDonated
 					@showFundsModal="onOpenUseOfFunds"
 					@clickedAlreadyDonatedLink="onClose( 'AlreadyDonated', CloseChoices.AlreadyDonated )"
 				/>
 			</template>
-        </MainBanner>
+		</MainBanner>
 
 		<SoftClose
 			v-if="contentState === ContentStates.SoftClosing"
@@ -70,16 +70,16 @@
 			@time-out-close="() => onClose( 'SoftClose', CloseChoices.TimeOut )"
 		/>
 
-    <FundsModal
-        :content="useOfFundsContent"
-        :is-funds-modal-visible="isFundsModalVisible"
-        @hideFundsModal="onCloseUseOfFunds"
+		<FundsModal
+			:content="useOfFundsContent"
+			:is-funds-modal-visible="isFundsModalVisible"
+			@hideFundsModal="onCloseUseOfFunds"
 		>
 			<template #infographic>
 				<WMDEFundsForwardingEN/>
 			</template>
 		</FundsModal>
-    </div>
+	</div>
 </template>
 
 <script setup lang="ts">

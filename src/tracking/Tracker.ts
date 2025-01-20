@@ -5,5 +5,5 @@ import { TrackingEvent } from '@src/tracking/TrackingEvent';
  * tracking system, e.g. MediaWiki event tracking (on mw.org) or Matomo (on mw.de)
  */
 export interface Tracker {
-    trackEvent: ( trackingData: TrackingEvent<any> ) => void;
+	trackEvent: ( trackingData: TrackingEvent<any> ) => void;
 }

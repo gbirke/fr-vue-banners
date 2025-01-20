@@ -1,23 +1,23 @@
 export interface CampaignProjectionParameters {
-    donationTarget: number,
-    /**
+	donationTarget: number,
+	/**
      * The date where the number of donors (donorsBase) and donation sum (baseDonationSum) were measured
      */
-    updatedAt: string,
-    donationSumBase: number,
-    donationCountBase: number,
-    donationAmountPerMinute: number,
-    donationCountPerMinute: number,
-    /**
+	updatedAt: string,
+	donationSumBase: number,
+	donationCountBase: number,
+	donationAmountPerMinute: number,
+	donationCountPerMinute: number,
+	/**
      * Needed to calculate missing number of donors by dividing the projected amount missing
      */
-    averageAmountPerDonation: number
+	averageAmountPerDonation: number
 }
 
 export interface ThankYouCampaignParameters {
-    numberOfDonors: number;
-    numberOfMembers: number;
-    progressBarPercentage: number;
+	numberOfDonors: number;
+	numberOfMembers: number;
+	progressBarPercentage: number;
 }
 
 /**
@@ -25,22 +25,22 @@ export interface ThankYouCampaignParameters {
  * the "environment" of the banner (i.e. wikipedia.org or wikipedia.de) to the dynamic text rendering.
  */
 export interface CampaignParameters {
-    campaignProjection: CampaignProjectionParameters,
-    millionImpressionsPerDay: number,
+	campaignProjection: CampaignProjectionParameters,
+	millionImpressionsPerDay: number,
 
-    /**
+	/**
      * Date in YYYY-MM-DD format
      */
-    startDate: string,
+	startDate: string,
 
-    /**
+	/**
      * Date in YYYY-MM-DD format (code will automatically add the time of 23:59:59)
      */
-    endDate: string,
-    numberOfMembers: number,
-    isLateProgress: boolean,
-    dramaTextIsVisible: boolean,
-    urgencyMessageDaysLeft: number,
+	endDate: string,
+	numberOfMembers: number,
+	isLateProgress: boolean,
+	dramaTextIsVisible: boolean,
+	urgencyMessageDaysLeft: number,
 
-    thankYouCampaign: ThankYouCampaignParameters
+	thankYouCampaign: ThankYouCampaignParameters
 }

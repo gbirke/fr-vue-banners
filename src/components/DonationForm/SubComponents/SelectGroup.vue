@@ -44,7 +44,7 @@
 <script setup lang="ts">
 import { FormItem } from '@src/utils/FormItemsBuilder/FormItem';
 
-interface Props{
+interface Props {
 	fieldName: string;
 	isValid: boolean;
 	selectionItems: FormItem[];

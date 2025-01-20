@@ -20,7 +20,6 @@ import { TimerStub } from '@test/fixtures/TimerStub';
 vi.mock( '@src/components/BannerConductor/StateMachine/BannerStateMachine', async () => {
 	const actual = await vi.importActual( '@src/components/BannerConductor/StateMachine/BannerStateMachine' );
 	return {
-		// @ts-ignore
 		...actual,
 		newBannerStateMachine: vi.fn()
 	};

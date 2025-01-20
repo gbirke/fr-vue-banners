@@ -40,11 +40,11 @@ const expectHidesAnimatedVisitorsVsDonorsSentenceInMessage = async ( getWrapper:
 	expect( wrapper.find( '.wmde-banner-message .wmde-banner-text-animated-highlight' ).exists() ).toBeFalsy();
 };
 const expectShowsAnimatedVisitorsVsDonorsSentenceInMessage = async ( getWrapper: ( dynamicContent: DynamicContent ) =>
-	VueWrapper<any>, minWidthForLargeScreen: number = 1301 ): Promise<any> => {
+VueWrapper<any>, minWidthForLargeScreen: number = 1301 ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: minWidthForLargeScreen } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
-	const wrapper = getWrapper( dynamicContent );
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
+	const wrapper = getWrapper( localDynamicContent );
 
 	expect( wrapper.find( '.wmde-banner-message .wmde-banner-text-animated-highlight' ).exists() ).toBeTruthy();
 };
@@ -57,32 +57,32 @@ const expectHidesAnimatedVisitorsVsDonorsSentenceInSlideShow = async ( getWrappe
 };
 const expectShowsAnimatedVisitorsVsDonorsSentenceInSlideShow = async ( getWrapper: ( dynamicContent: DynamicContent ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1300 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
-	const wrapper = getWrapper( dynamicContent );
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.visitorsVsDonorsSentence = 'Visitors vs donors sentence';
+	const wrapper = getWrapper( localDynamicContent );
 
 	expect( wrapper.find( '.wmde-banner-slider .wmde-banner-text-animated-highlight' ).exists() ).toBeTruthy();
 };
 
 const expectShowsLiveDateAndTimeInMessage = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1301 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( dynamicContent, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( localDynamicContent, timerSpy );
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Time' );
@@ -90,23 +90,23 @@ const expectShowsLiveDateAndTimeInMessage = async ( getWrapper: ( dynamicContent
 
 const expectShowsLiveDateAndTimeInSlideshow = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1300 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( dynamicContent, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( localDynamicContent, timerSpy );
 
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( 'Third Time' );
@@ -114,23 +114,23 @@ const expectShowsLiveDateAndTimeInSlideshow = async ( getWrapper: ( dynamicConte
 
 const expectShowsLiveDateAndTimeInTitle = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1301 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( dynamicContent, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( localDynamicContent, timerSpy );
 
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-message-header' ).text() ).toContain( 'Third Time' );
@@ -138,71 +138,71 @@ const expectShowsLiveDateAndTimeInTitle = async ( getWrapper: ( dynamicContent: 
 
 const expectShowsAverageDonationInMessage = async ( getWrapper: ( dynamicContent: DynamicContent ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1301 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.averageDonation = '== Average Donation ==';
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.averageDonation = '== Average Donation ==';
 
-	const wrapper = getWrapper( dynamicContent );
+	const wrapper = getWrapper( localDynamicContent );
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( '== Average Donation ==' );
 };
 
 const expectShowsAverageDonationInSlideshow = async ( getWrapper: ( dynamicContent: DynamicContent ) => VueWrapper<any> ): Promise<any> => {
 	Object.defineProperty( window, 'innerWidth', { writable: true, configurable: true, value: 1300 } );
-	const dynamicContent = newDynamicContent();
-	dynamicContent.averageDonation = '== Average Donation ==';
+	const localDynamicContent = newDynamicContent();
+	localDynamicContent.averageDonation = '== Average Donation ==';
 
-	const wrapper = getWrapper( dynamicContent );
+	const wrapper = getWrapper( localDynamicContent );
 
 	expect( wrapper.find( '.wmde-banner-slider' ).text() ).toContain( '== Average Donation ==' );
 };
 
 const expectShowsLiveDateAndTimeInMiniBanner = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
-	const dynamicContent = newDynamicContent();
+	const localDynamicContent = newDynamicContent();
 	// There are 2 live text elements mounted at the same time in the mobile banners meaning it will be initialised twice
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( dynamicContent, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( localDynamicContent, timerSpy );
 
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-mini-slideshow' ).text() ).toContain( 'Third Time' );
 };
 
 const expectShowsLiveDateAndTimeInFullPageBanner = async ( getWrapper: ( dynamicContent: DynamicContent, timer: Timer ) => VueWrapper<any> ): Promise<any> => {
-	const dynamicContent = newDynamicContent();
+	const localDynamicContent = newDynamicContent();
 	// There are 2 live text elements mounted at the same time in the mobile banners meaning it will be initialised twice
-	dynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
+	localDynamicContent.getCurrentDateAndTime = vi.fn().mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Initial Date', currentTime: 'Initial Time' } )
 		.mockReturnValueOnce( { currentDate: 'Second Date', currentTime: 'Second Time' } )
 		.mockReturnValueOnce( { currentDate: 'Third Date', currentTime: 'Third Time' } );
 
-	const timer = new TimerSpy();
-	const wrapper = getWrapper( dynamicContent, timer );
+	const timerSpy = new TimerSpy();
+	const wrapper = getWrapper( localDynamicContent, timerSpy );
 
 	await wrapper.find( '.wmde-banner-mini-button' ).trigger( 'click' );
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Initial Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Second Time' );
 
-	await timer.advanceInterval();
+	await timerSpy.advanceInterval();
 
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Date' );
 	expect( wrapper.find( '.wmde-banner-message' ).text() ).toContain( 'Third Time' );
@@ -224,12 +224,12 @@ export const bannerContentAverageDonationFeatures: Record<string, ( getWrapper: 
 };
 
 export const bannerContentAnimatedTextFeatures: Record<string, ( getWrapper: () =>
-	VueWrapper<any>, minWidthForLargeScreen: number|void ) => Promise<any>> = {
-		expectHidesAnimatedVisitorsVsDonorsSentenceInMessage,
-		expectShowsAnimatedVisitorsVsDonorsSentenceInMessage,
-		expectHidesAnimatedVisitorsVsDonorsSentenceInSlideShow,
-		expectShowsAnimatedVisitorsVsDonorsSentenceInSlideShow
-	};
+VueWrapper<any>, minWidthForLargeScreen: number|void ) => Promise<any>> = {
+	expectHidesAnimatedVisitorsVsDonorsSentenceInMessage,
+	expectShowsAnimatedVisitorsVsDonorsSentenceInMessage,
+	expectHidesAnimatedVisitorsVsDonorsSentenceInSlideShow,
+	expectShowsAnimatedVisitorsVsDonorsSentenceInSlideShow
+};
 
 export const bannerContentDateAndTimeFeatures: Record<string, ( getWrapper: () => VueWrapper<any> ) => Promise<any>> = {
 	expectShowsLiveDateAndTimeInMessage,

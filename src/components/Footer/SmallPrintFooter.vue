@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="wmde-banner-footer-bank">
-			<label class="wmde-banner-footer-bank-item account">{{ $translate('donation-account') }}:
+			<label class="wmde-banner-footer-bank-item account">{{ $translate( 'donation-account' ) }}:
 				<SelectionInput :value="'Wikimedia e. V.'"/>
 			</label>
 			<div class="wmde-banner-footer-bank-item iban-and-bic">

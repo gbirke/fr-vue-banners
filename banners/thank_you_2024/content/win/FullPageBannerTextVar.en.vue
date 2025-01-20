@@ -28,13 +28,14 @@
 
 		<p>
 			That's why we're asking you to <span class="highlight">become a sustaining member and to help us grapple
-			with the coming technological challenges.</span> So volunteers can always do their work under optimal
+				with the coming technological challenges.</span> So volunteers can always do their work under optimal
 			conditions -- and so you can rely now and in the future on Wikipedia as a place of open access to knowledge
 			and education.
 		</p>
 	</div>
 
 </template>
+
 <script setup lang="ts">
 import ExecutiveDirectorsImage from '@banners/thank_you_2024/content/ExecutiveDirectorsImage.vue';
 import StatsBox from '@banners/thank_you_2024/components/StatsBox.vue';

@@ -73,6 +73,7 @@ export default {
 	name: 'MainDonationFormAdaptiveAmounts'
 };
 </script>
+
 <script setup lang="ts">
 
 import { inject, ref } from 'vue';

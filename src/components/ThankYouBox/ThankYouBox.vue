@@ -9,6 +9,7 @@
 import HeartIcon from '@src/components/Icons/HeartIcon.vue';
 
 </script>
+
 <style lang="scss">
 	.thank-you-container {
 		height: 60px;

@@ -7,7 +7,7 @@
 			<button
 				class="funds-distribution-accordion-item-title"
 				@click="toggleActive( String( idx ) )"
-				:style="{color: fundsItem.colour}"
+				:style="{ color: fundsItem.colour }"
 			>
 				{{ fundsItem.title }} {{ fundsItem.percentage }}% <ChevronDownIcon class="funds-distribution-accordion-item-chevron"/>
 			</button>

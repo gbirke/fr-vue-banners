@@ -38,14 +38,14 @@ interface Props {
 	page: Page,
 	bannerConfig: BannerConfig,
 	resizeHandler: ResizeHandler,
-	banner: Object,
-	bannerProps?: Object,
+	banner: object,
+	bannerProps?: object,
 	impressionCount: ImpressionCount,
 	bannerCategory: BannerCategory
 }
 
 const props = withDefaults( defineProps<Props>(), {
-	bannerProps: (): any => {}
+	bannerProps: (): any => ( {} )
 } );
 const tracker = inject<Tracker>( 'tracker' );
 const timer = inject<Timer>( 'timer' );

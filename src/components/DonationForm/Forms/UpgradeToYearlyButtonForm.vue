@@ -1,14 +1,14 @@
 <template>
-    <form @submit.prevent="onSubmit" class="wmde-banner-sub-form wmde-banner-form-upgrade">
-        <div class="wmde-banner-form-upgrade-title">
-            <a tabIndex="-1" href="#" class="previous" @click.prevent="onPrevious">
+	<form @submit.prevent="onSubmit" class="wmde-banner-sub-form wmde-banner-form-upgrade">
+		<div class="wmde-banner-form-upgrade-title">
+			<a tabIndex="-1" href="#" class="previous" @click.prevent="onPrevious">
 				<slot name="back">
 					<FormPreviousIcon/>
 				</slot>
-            </a>
-            {{ $translate( 'upgrade-to-yearly-header', { amount: secondPageAmount } ) }}
-        </div>
-        <div class="wmde-banner-form-upgrade-notice" v-html="$translate( 'upgrade-to-yearly-copy' )"/>
+			</a>
+			{{ $translate( 'upgrade-to-yearly-header', { amount: secondPageAmount } ) }}
+		</div>
+		<div class="wmde-banner-form-upgrade-notice" v-html="$translate( 'upgrade-to-yearly-copy' )"/>
 
 		<div class="wmde-banner-form-upgrade-buttons">
 			<button
@@ -39,7 +39,7 @@
 				{{ $translate( 'upgrade-to-yearly-link' ) }}
 			</a>
 		</div>
-    </form>
+	</form>
 </template>
 
 <script setup lang="ts">
@@ -53,6 +53,7 @@ import { UpgradeToYearlyEvent } from '@src/tracking/events/UpgradeToYearlyEvent'
 import FormPreviousIcon from '@src/components/Icons/FormPreviousIcon.vue';
 
 interface Props {
+	// eslint-disable-next-line vue/no-unused-properties
 	isCurrent: boolean;
 	showManualUpgradeOption?: boolean;
 }

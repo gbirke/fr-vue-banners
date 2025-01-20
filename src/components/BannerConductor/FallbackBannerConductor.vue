@@ -40,15 +40,15 @@ interface Props {
 	bannerConfig: BannerConfig,
 	resizeHandler: ResizeHandler,
 	banner: Object,
-	fallbackBanner: Object,
+	fallbackBanner: object,
 	minWidthForMainBanner: number,
-	bannerProps?: Object,
+	bannerProps?: object,
 	impressionCount: ImpressionCount,
 	bannerCategory: BannerCategory
 }
 
 const props = withDefaults( defineProps<Props>(), {
-	bannerProps: (): any => {}
+	bannerProps: (): any => ( {} )
 } );
 const tracker = inject<Tracker>( 'tracker' );
 const timer = inject<Timer>( 'timer' );

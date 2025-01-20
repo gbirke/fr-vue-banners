@@ -1,16 +1,16 @@
 <template>
 	<div class="wmde-banner-selection-input"
 		:class="{ focused: focused }">
-	<span class="wmde-banner-selection-input-text">{{ value }}</span>
-	<input
-		class="wmde-banner-selection-input-input"
-		type="text"
-		readonly
-		:value="focusedValue || value"
-		@focus="handleFocus"
-		@blur="handleBlur"
-		ref="inputRef"
-	/>
+		<span class="wmde-banner-selection-input-text">{{ value }}</span>
+		<input
+			class="wmde-banner-selection-input-input"
+			type="text"
+			readonly
+			:value="focusedValue || value"
+			@focus="handleFocus"
+			@blur="handleBlur"
+			ref="inputRef"
+		/>
 	</div>
 </template>
 

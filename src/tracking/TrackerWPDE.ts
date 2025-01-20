@@ -6,8 +6,6 @@ import { FormStepShownEvent } from '@src/tracking/events/FormStepShownEvent';
 import { RuntimeEnvironment } from '@src/utils/RuntimeEnvironment';
 import { ShownEvent } from '@src/tracking/events/ShownEvent';
 
-type TrackingRatesForEvents = Map<string, number>;
-
 interface Window {
 	[ key: string ]: any;
 }
@@ -18,12 +16,15 @@ interface PageTracker {
 	trackContentImpression( category: string, bannerName: string ): void;
 }
 
+type TrackingRatesForEvents = Map<string, number>;
+type TrackerFunction = ( tracker: PageTracker ) => void;
+
 export class TrackerWPDE implements Tracker {
 
 	private readonly _trackerName: string;
 	private readonly _bannerName: string;
 	private readonly _trackingRatesForEvents: TrackingRatesForEvents;
-	private _preInitialisationEventQueue: Function[];
+	private _preInitialisationEventQueue: TrackerFunction[];
 	private _trackerFindCounter: number;
 	private _hasFoundTracker: boolean;
 	private _tracker: PageTracker;
@@ -91,7 +92,7 @@ export class TrackerWPDE implements Tracker {
 		return typeof window[ trackerName ] !== 'undefined' && window[ trackerName ] !== null;
 	}
 
-	private trackOrStore( trackFn: Function ): void {
+	private trackOrStore( trackFn: TrackerFunction ): void {
 		if ( !this._hasFoundTracker ) {
 			this._preInitialisationEventQueue.push( trackFn );
 			return;

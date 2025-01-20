@@ -58,6 +58,7 @@ import { useFormStepShownEvent } from '@src/components/DonationForm/Forms/useFor
 import FormPreviousIcon from '@src/components/Icons/FormPreviousIcon.vue';
 
 interface Props {
+	// eslint-disable-next-line vue/no-unused-properties
 	isCurrent: boolean
 }
 

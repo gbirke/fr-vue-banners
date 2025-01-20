@@ -6,11 +6,11 @@ import { ImpressionCount } from '@src/utils/ImpressionCount';
 import DynamicCampaignText from '@src/utils/DynamicContent/DynamicCampaignText';
 
 interface DynamicCampaignTextOptions {
-    date: Date;
-    translator: Translator;
-    formatters: Formatters;
-    campaignParameters: CampaignParameters;
-    impressionCount: ImpressionCount;
+	date: Date;
+	translator: Translator;
+	formatters: Formatters;
+	campaignParameters: CampaignParameters;
+	impressionCount: ImpressionCount;
 	/**
 	 * @deprecated This should be removed in the 2025 campaign cleanup
 	 */

@@ -2,7 +2,7 @@
 	<ImageWithCopyright/>
 	<p>
 		<strong>We're so grateful for your amazing support!<br>Nonetheless, we're sorry to report that, for the very
-		first time, we didn't reach our donation goal.</strong>
+			first time, we didn't reach our donation goal.</strong>
 	</p>
 
 	<p>

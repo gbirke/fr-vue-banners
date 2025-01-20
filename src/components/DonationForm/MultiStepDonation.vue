@@ -1,15 +1,18 @@
 <template>
 	<div class="wmde-banner-form wmde-banner-form-multi-step keen-slider" ref="container" @click="onClick">
-		<template v-for="( slotName, idx ) in usedSlotNames" :key="idx">
-			<div class="keen-slider__slide wmde-banner-form-page" :class="{ 'wmde-banner-form-page--current': currentStepIndex === idx }">
-				<slot
-					:name="slotName"
-					:isCurrent="idx === currentStepIndex"
-					:submit="onSubmit"
-					:previous="onPrevious"
-				/>
-			</div>
-		</template>
+		<div
+			v-for="( slotName, idx ) in usedSlotNames"
+			:key="idx"
+			class="keen-slider__slide wmde-banner-form-page"
+			:class="{ 'wmde-banner-form-page--current': currentStepIndex === idx }"
+		>
+			<slot
+				:name="slotName"
+				:isCurrent="idx === currentStepIndex"
+				:submit="onSubmit"
+				:previous="onPrevious"
+			/>
+		</div>
 	</div>
 	<form ref="submitFormRef" :action="formAction" class="wmde-banner-submit-form" method="post">
 		<SubmitValues />
@@ -30,7 +33,6 @@ import { FormActions } from '@src/domain/FormActions';
 import { Timer } from '@src/utils/Timer';
 
 interface Props {
-	showErrorScrollLink?: boolean;
 	stepControllers: StepController[];
 	pageScroller?: PageScroller;
 	formActionOverride?: string;
@@ -41,7 +43,7 @@ interface Props {
 const props = withDefaults( defineProps<Props>(), {
 	showErrorScrollLink: false,
 	formActionOverride: '',
-	submitCallback: () => {}
+	submitCallback: () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 } );
 const emit = defineEmits( [ 'formInteraction' ] );
 

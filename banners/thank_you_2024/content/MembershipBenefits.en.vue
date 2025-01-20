@@ -6,6 +6,7 @@
 		<li><ListTick/> At your request: Our exclusive Wikipedia tote bag</li>
 	</ul>
 </template>
+
 <script setup lang="ts">
 import ListTick from '@banners/thank_you_2024/content/ListTick.vue';
 </script>

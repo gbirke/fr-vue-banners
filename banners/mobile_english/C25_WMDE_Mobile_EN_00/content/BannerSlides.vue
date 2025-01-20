@@ -17,7 +17,7 @@
 	<KeenSliderSlide :is-current="currentSlide === 3">
 		<p>
 			If you can, please join the 1% of readers who give. <span class="wmde-banner-text-animated-highlight">If
-			everyone reading this right now gave just €10, we'd hit our goal in a couple of hours.</span>
+				everyone reading this right now gave just €10, we'd hit our goal in a couple of hours.</span>
 			It's hard to know what to trust online these days. Disinformation and scammers are everywhere.
 		</p>
 	</KeenSliderSlide>

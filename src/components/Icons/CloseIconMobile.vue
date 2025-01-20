@@ -7,6 +7,6 @@
 
 <script setup lang="ts">
 
-withDefaults( defineProps<{fill?: string}>(), { fill: '#72777D' } );
+withDefaults( defineProps<{ fill?: string }>(), { fill: '#72777D' } );
 
 </script>

@@ -19,7 +19,7 @@ interface Props {
 }
 
 const props = withDefaults( defineProps<Props>(), {
-	extraUrlParameters: (): any => {}
+	extraUrlParameters: (): any => ( {} )
 } );
 
 const formActions = inject<MembershipFormActions>( 'formActions' );

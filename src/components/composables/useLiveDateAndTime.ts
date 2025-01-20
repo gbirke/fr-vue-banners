@@ -6,7 +6,7 @@ type ReturnType = {
 	liveDateAndTime: Ref<DateAndTime>;
 	startTimer: () => void;
 	stopTimer: () => void;
-}
+};
 
 export function useLiveDateAndTime( getCurrentDateAndTime: () => DateAndTime ): ReturnType {
 	const timer = inject<Timer>( 'timer' );

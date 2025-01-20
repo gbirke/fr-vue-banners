@@ -24,10 +24,10 @@ export class HourlyConfigurableDailyDonorAverage implements DailyDonorAverage {
 
 	public getDonorStatsForTime( time: Date ): DailyDonorStatsValues {
 		const currentHourIndex = time.getHours();
-		const previousHours = this._hourlyDonorPercentages.filter( ( percentage, index ) => index < currentHourIndex );
+		const previousHours = this._hourlyDonorPercentages.filter( ( _, index ) => index < currentHourIndex );
 
 		const currentHourPercentage = this._hourlyDonorPercentages[ currentHourIndex ] * time.getMinutes() / 60;
-		const previousHoursPercentage = previousHours.reduce( ( currentTotal: number, percentage: number ) => currentTotal + percentage, 0 );
+		const previousHoursPercentage = previousHours.reduce( ( currentTotal: number, previousHourPercentage: number ) => currentTotal + previousHourPercentage, 0 );
 
 		const percentage = ( previousHoursPercentage + currentHourPercentage ) / 100;
 		const cappedPercentage = Math.min( percentage, 0.9 );

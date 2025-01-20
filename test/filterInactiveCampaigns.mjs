@@ -10,13 +10,14 @@ function getCampaignNamesAndMappings( campaignConfigPath ) {
 		acc.activeCampaigns.push( channelConfig.campaign );
 		acc.campaignsToChannels[ channelConfig.campaign ] = channelName;
 		return acc;
-	}.bind( this ), { activeCampaigns: [], campaignsToChannels: {} } );
+	}, { activeCampaigns: [], campaignsToChannels: {} } );
 }
 
 /**
  * Get "exclude" globs for vitest by examining current test folder hierarchy and comparing with the names
  * of current campaigns in the campaign configuration.
  *
+ * @param {string} bannerGlob Glob pattern for banner entry point files, e.g. 'banners/*\/*.js Make sure to glob only one level deep, don't use '**' in the pattern.
  * @param {string} bannerTestGlob Glob pattern for banner test folders, e.g. 'test/banners/*\/* Make sure to glob only one level deep, don't use '**' in the pattern.
  * @param {string} campaignConfigPath Path to the campaign config file, defaults to 'campaign_info.toml'
  * @return {{inactiveCampaignGlobs: string[], campaignsWithoutTests: string[], activeCampaigns: string[]}}
@@ -57,6 +58,6 @@ export function getFilterForInactiveCampaigns( bannerGlob, bannerTestGlob, campa
 		activeCampaigns,
 		inactiveCampaignGlobs,
 		inactiveBannerGlobs,
-		campaignsWithoutTests
+		campaignsWithoutTests,
 	};
 }

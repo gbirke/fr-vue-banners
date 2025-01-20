@@ -9,8 +9,8 @@
 				at {{ liveDateAndTime.currentTime }} I ask you to
 				reflect on the number of times you visited Wikipedia in the past year, the value you got from it,
 				and whether you're able to give €10 back. If you can, please join the 1% of readers who give. <span
-				class="wmde-banner-text-animated-highlight">If everyone reading this right now gave just €10, we'd
-				hit our goal in a couple of hours.</span> It's hard to know what
+					class="wmde-banner-text-animated-highlight">If everyone reading this right now gave just €10, we'd
+					hit our goal in a couple of hours.</span> It's hard to know what
 				to trust online these days. Disinformation and scammers are everywhere. We are passionate about our
 				model because we want everyone to have equal access to quality information - something that is becoming
 				harder and harder to find online. If Wikipedia has given you €10 worth of knowledge this year, please

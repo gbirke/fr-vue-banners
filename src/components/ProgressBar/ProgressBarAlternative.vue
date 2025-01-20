@@ -13,7 +13,7 @@
 		<div class="wmde-banner-progress-bar-wrapper">
 			<div class="wmde-banner-progress-bar-fill-wrapper">
 				<div class="wmde-banner-progress-bar-fill">
-				<span class="wmde-banner-progress-bar-fill-text">
+					<span class="wmde-banner-progress-bar-fill-text">
 						{{ progressBarContent.amountDonated }}
 					</span>
 				</div>

@@ -2,13 +2,13 @@
 	<div class="wmde-banner-message">
 		<div>
 			<p>
-                <InfoIconStraight/> An diesem {{ currentDayName }}, den {{ liveDateAndTime.currentDate }}, um
+				<InfoIconStraight/> An diesem {{ currentDayName }}, den {{ liveDateAndTime.currentDate }}, um
 				{{ liveDateAndTime.currentTime }} sind Sie gefragt:
 			</p>
 			<p>
 				{{ campaignDaySentence }} Wikipedia wird durch Spenden von durchschnittlich {{ averageDonation }} finanziert, aber 99&nbsp;% der
 				Lesenden spenden nicht. <strong>Wenn alle, die das jetzt lesen, einen kleinen Beitrag leisten, wäre unser
-				Spendenziel bereits heute erreicht.</strong> Menschen spenden aus einem einfachen Grund – weil
+					Spendenziel bereits heute erreicht.</strong> Menschen spenden aus einem einfachen Grund – weil
 				Wikipedia nützlich ist. Schon der Preis einer Tasse Kaffee würde genügen.
 				<AnimatedText :content="visitorsVsDonorsSentence"/> Wenn Wikipedia eine kommerzielle Seite sein
 				würde, wäre das ein riesiger Verlust für die Welt. Sicher könnten wir mit

@@ -1,6 +1,6 @@
 <template>
 	<label class="wmde-banner-fallback-bank-item account">
-		<span class="wmde-banner-fallback-bank-item-label">{{ $translate('donation-account') }}:</span><SelectionInput :value="'Wikimedia e. V.'"/>
+		<span class="wmde-banner-fallback-bank-item-label">{{ $translate( 'donation-account' ) }}:</span><SelectionInput :value="'Wikimedia e. V.'"/>
 	</label>
 	<label class="wmde-banner-fallback-bank-item bic">
 		<span class="wmde-banner-fallback-bank-item-label">BIC:</span><SelectionInput :value="'BFSWDE33XXX'"/>

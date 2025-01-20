@@ -6,6 +6,7 @@
 		<li><CheckCircleIcon/> Auf Wunsch: Unser exklusiver Wikipedia-Stoffbeutel</li>
 	</ul>
 </template>
+
 <script setup lang="ts">
 import CheckCircleIcon from '../components/icons/CheckCircleIcon.vue';
 </script>

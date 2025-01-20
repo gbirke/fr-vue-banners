@@ -7,6 +7,7 @@ export class BannerStateMachine implements StateMachine<BannerState> {
 
 	public constructor( stateRef: ReactiveProperty<BannerState> ) {
 		this.currentState = stateRef;
+		// eslint-disable-next-line @typescript-eslint/no-empty-function
 		this.currentState.value.enter( null ).then( ()=>{} );
 	}
 

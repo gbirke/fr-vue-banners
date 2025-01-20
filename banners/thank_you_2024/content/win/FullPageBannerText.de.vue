@@ -45,6 +45,7 @@
 	</div>
 
 </template>
+
 <script setup lang="ts">
 import ExecutiveDirectorsImage from '@banners/thank_you_2024/content/ExecutiveDirectorsImage.vue';
 import StatsBox from '@banners/thank_you_2024/components/StatsBox.vue';

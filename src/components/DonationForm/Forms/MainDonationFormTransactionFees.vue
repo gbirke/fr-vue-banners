@@ -66,7 +66,7 @@
 				v-model="hasTransactionFee"
 			>
 			<label for="wmde-banner-form-cover-transaction-costs">
-				{{ $translate('cover-transaction-costs', { transactionCosts: currencyFormatter.euroAmount( transactionFee ) } ) }}
+				{{ $translate( 'cover-transaction-costs', { transactionCosts: currencyFormatter.euroAmount( transactionFee ) } ) }}
 			</label>
 		</div>
 
@@ -87,6 +87,7 @@ export default {
 	name: 'MainDonationFormTransactionFees'
 };
 </script>
+
 <script setup lang="ts">
 
 import { inject, ref } from 'vue';

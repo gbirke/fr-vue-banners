@@ -28,11 +28,11 @@
 					@click.prevent="$emit( 'showFundsModal' )"
 					:title="$translate( 'use-of-funds-link-description' )"
 				>
-				{{ $translate('use-of-funds-link') }}
+					{{ $translate( 'use-of-funds-link' ) }}
 				</a>
 			</div>
 		</div>
-		</div>
+	</div>
 </template>
 
 <script setup lang="ts">

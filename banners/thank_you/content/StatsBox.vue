@@ -29,6 +29,7 @@
 		</div>
 	</div>
 </template>
+
 <script setup lang="ts">
 import PeopleIcon from '../components/icons/PeopleIcon.vue';
 import HandIcon from '../components/icons/HandIcon.vue';

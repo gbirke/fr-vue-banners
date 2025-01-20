@@ -5,6 +5,8 @@ class Vector implements Skin {
 	protected _editButtonSelector: string = '.mw-editsection a, .vector-menu-tabs a';
 
 	private _searchField: HTMLInputElement;
+	// TODO The next "disable" comment might be unnecessary when we upgrade to ESLint 9 and more recent versions of the TypeScript ESLint plugin
+	// eslint-disable-next-line no-undef
 	private _editButtons: NodeListOf<Element>;
 	private _hideBannerCallback: () => void;
 	private readonly _referencedHideBannerCallback: () => void;

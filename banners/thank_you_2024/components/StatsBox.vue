@@ -51,6 +51,7 @@
 		</li>
 	</ul>
 </template>
+
 <script setup lang="ts">
 interface Props {
 	numberOfPeople: string

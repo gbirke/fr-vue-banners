@@ -65,7 +65,7 @@
 			@close="() => onClose( 'SoftClose', CloseChoices.Close )"
 			@maybeLater="() => onClose( 'SoftClose', CloseChoices.MaybeLater )"
 			@timeOutClose="() => onClose( 'SoftClose', CloseChoices.TimeOut )"
-			@maybeLater7Days="() => onClose('SoftClose', CloseChoices.Close)"
+			@maybeLater7Days="() => onClose( 'SoftClose', CloseChoices.Close )"
 		/>
 
 		<FundsModal

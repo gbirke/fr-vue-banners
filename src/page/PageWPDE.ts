@@ -13,6 +13,7 @@ export interface WpdeWindow extends Window {
 
 declare let window: WpdeWindow;
 
+/* eslint-disable @typescript-eslint/no-empty-function */
 class PageWPDE implements Page {
 
 	public constructor( private readonly trackingParams: TrackingParameters ) {

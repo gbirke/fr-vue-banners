@@ -37,7 +37,6 @@
 <script setup lang="ts">
 
 import { inject, ref } from 'vue';
-import { BannerStates } from '@src/components/BannerConductor/StateMachine/BannerStates';
 import { ThankYouSettings } from '@banners/thank_you_2024/settings';
 import { Tracker } from '@src/tracking/Tracker';
 import { CloseEvent } from '@src/tracking/events/CloseEvent';
@@ -58,7 +57,6 @@ enum ContentStates {
 }
 
 interface Props {
-	bannerState: BannerStates;
 	settings: ThankYouSettings;
 	subscribeURL: string;
 	useOfFundsURL: string;
